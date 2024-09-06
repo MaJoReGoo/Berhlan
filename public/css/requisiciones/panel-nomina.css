@@ -1,0 +1,26 @@
+.select2-container .select2-selection--single {
+  height: 40px;
+  /* Cambia la altura según lo necesites */
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  top: 6px;
+}
+
+
+.with_input {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.eliminar_nivel_cargo {
+  position: absolute;
+  margin: 13px;
+}
+
+#modalCargosNiveles {
+  padding: 3rem;
+}

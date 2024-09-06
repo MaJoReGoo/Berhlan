@@ -1,0 +1,132 @@
+.titulos
+{
+    margin          : -20px 0 0 0;
+    float           : left;
+}
+
+.fila
+{
+    float           : left;
+    width           : 100%;
+    margin          : 5px 0 0 10px;
+}
+
+.filab
+{
+    float           : left;
+    width           : 100%;
+    margin          : 5px 0 0 -145px;
+}
+
+.filabn
+{   
+    float           : left;
+    width           : 100%;
+    margin          : 5px 0 0 -270px;
+}
+
+.etiquetas
+{
+    width           : 600px;
+    float           : left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#7CBE12;
+}
+
+.textos
+{
+    width           : 600px;
+    float           : left;
+	
+}
+
+.textosn
+{
+    width           : 800px;
+    float           : left;
+	
+}
+
+label.error
+{ 
+    color	    : red; 
+    margin-left	    : 0.5em; 
+    width	    : 20em; 
+}
+
+#boton_limpiar
+{
+    margin          : 10px 0 20px 280px;
+}
+
+#secre, #pac
+{
+    margin          : 20px 0 0 0;
+}
+
+#med
+{
+    margin          : 0;
+}
+
+#profesion, #telef
+{
+    margin          : 0 0 0 13px;
+}
+
+.comodin
+{
+	color           : #F00;
+	margin          : 0 5px 0 0;
+}
+
+.comodint
+{
+	color           : #EBEBEB;
+	margin          : 0 5px 0 0;
+}
+
+.form_alert_msg {
+    font-size       : 10px;
+	font-family:Verdana, Geneva, sans-serif;
+    font-weight     : bold;
+    color           : #ffffff;
+    display         :inline;
+    background-color: #1F6C98;
+    padding         : 2px 5px;
+    margin-left     : 5px;
+    border-top      : 1px solid #35b8e6;
+    border-right    : 2px solid #35b8e6;
+    border-bottom   : 1px solid #35b8e6;
+    border-left     : 2px solid #35b8e6;
+}
+
+#seccion_medico, #seccion_secretaria, #seccion_paciente
+{
+    float           : left;
+}
+
+.but {
+	background-color: #f3f3f3;
+	border-color: #35b8e6;
+	border-style: solid;
+	border-width: 1px;
+	color: #063E6F;
+	font-size: 7pt;
+	font-family: verdana;
+	font-weight: bold;
+	width:50px;
+}
+
+.butF {
+	background-color: #f3f3f3;
+	border-color: #35b8e6;
+	border-style: solid;
+	border-width: 1px;
+	color: #063E6F;
+	font-size: 7pt;
+	font-family: verdana;
+	font-weight: bold;
+	width:80px;
+}

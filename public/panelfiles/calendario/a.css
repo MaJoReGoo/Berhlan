@@ -1,0 +1,862 @@
+body>main {
+    transition: margin-left .3s;
+    margin-top: 5em
+}
+
+body>header {
+    height: 3em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: background-color .2s
+}
+
+body>header nav {
+    display: inline-block;
+    width: 70%;
+    margin-left: -70%;
+    padding: 1em;
+    transition: margin-left .5s
+}
+
+body>header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+body>header nav ul a {
+    text-decoration: none
+}
+
+body>header nav ul li {
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: .2em
+}
+
+body>header div#menu-trigger {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    margin: .5em;
+    padding: .45em .3em;
+    transition: background-color .5s, margin-left .5s
+}
+
+body>header div#menu-trigger div.stripe {
+    width: 100%;
+    height: .2em;
+    margin-bottom: .25em;
+    transition: background-color .5s
+}
+
+body>header div.loc {
+    display: none;
+    height: 2em;
+    margin: .7em .5em;
+    transition: opacity 0.2s .3s
+}
+
+body>header div.loc span {
+    font-weight: 900;
+    color: #eb775b;
+    padding: .4em 0
+}
+
+@media (min-width: 17em){body>header div.loc {
+        display: inline-block
+    }
+}
+
+body.headerOpen>header {
+    background-color: white
+}
+
+body.headerOpen>header nav {
+    margin-left: 0
+}
+
+body.headerOpen>header div#menu-trigger {
+    margin-left: 0
+}
+
+body.headerOpen>header div.loc {
+    opacity: 0;
+    transition: opacity .2s 0s
+}
+
+body.headerOpen>main {
+    margin-left: 70% !important
+}
+
+body.headerOpen>main div.header-image {
+    margin-left: 0
+}
+
+@media (min-width: 35em){body>header nav {
+        width: 15em;
+        margin-left: -15em
+    }
+
+    body.headerOpen>main {
+        margin-left: 15em !important
+    }
+}
+
+body>footer {
+    min-height: 2em;
+    text-align: right;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: height .1s .5s, opacity .5s;
+    margin-top: 2em;
+    padding: 0 1em .5em
+}
+
+body>footer a {
+    text-decoration: none
+}
+
+body>footer div {
+    margin: 0 0.5em
+}
+
+body.height-s-window>footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%
+}
+
+body.height-s-window>main {
+    margin-bottom: 5em
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: top;
+    margin: 0;
+    padding: 0
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section, main {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    vertical-align: top
+}
+
+body, html {
+    margin: 0
+}
+
+html {
+    height: 100%
+}
+
+body {
+    min-height: 100%
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 3em 0 .2em;
+    font-weight: 700;
+    line-height: 1.2;
+    color: black
+}
+
+h1.subhead, h2.subhead, h3.subhead, h4.subhead, h5.subhead {
+    font-weight: 400;
+    margin: 0.5em 0
+}
+
+h1:first-child, h2:first-child, h3:first-child, h4:first-child,
+h5:first-child {
+    margin-top: 1em
+}
+
+h1 {
+    font-size: 2.7em
+}
+
+h2 {
+    font-size: 2.2em
+}
+
+h3 {
+    font-size: 1.7em
+}
+
+h4 {
+    font-size: 1.5em
+}
+
+h5 {
+    font-size: 1.2em
+}
+
+h5.subhead {
+    font-size: 0.8em
+}
+
+p {
+    margin: .3em 0 .5em
+}
+
+ol {
+    list-style: decimal;
+    padding-left: 2em
+}
+
+input[type=text], input[type=email], input[type=password], input[type=search],
+input[type=tel], textarea {
+    font: inherit;
+    display: block;
+    width: 20em;
+    max-width: 100%;
+    outline: none;
+    border: 0.2em rgba(0, 0, 0, 0.2) solid;
+    padding: 0.5em;
+    margin: 0.5em 0
+}
+
+textarea {
+    min-height: 15em;
+    width: 30em;
+    resize: none
+}
+
+label+input[type=text], label+input[type=email], label+input[type=password],
+label+input[type=search], label+input[type=tel], label+textarea {
+    margin-top: 0
+}
+
+label {
+    font-weight: 700;
+    font-size: .9em
+}
+
+input[type=submit], button {
+    background: transparent;
+    border: 0.15em rgba(0, 0, 0, 0.15) solid;
+    font-size: 0.9em;
+    padding: 1em 2em;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    line-height: 1;
+    border-radius: 5px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s
+}
+
+input[type=submit]:hover, button:hover {
+    background: #444;
+    color: white;
+    border-color: #444
+}
+
+pre {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    font-size: 0.8em;
+    overflow-x: auto
+}
+
+code {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: .5em;
+    font-size: .8em;
+    vertical-align: middle
+}
+
+code span {
+    vertical-align: middle
+}
+
+b, strong {
+    font-weight: bold
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local("Open Sans Light"), local("OpenSans-Light"), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format("woff")
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Open Sans"), local("OpenSans"), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format("woff")
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format("woff")
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local("Open Sans Bold"), local("OpenSans-Bold"), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format("woff")
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-hnhCUOGz7vYGh680lGh-uXM.woff) format("woff")
+}
+
+body.post>main article {
+    line-height: 1.9
+}
+
+body.post>main article>header {
+    margin-bottom: 3em
+}
+
+body.post>main article>header .meta, body.post>main article>header .meta * {
+    color: #4b4b4b;
+    stroke: #4b4b4b
+}
+
+body.post>main article .more-buttons-holder {
+    width: 111%;
+    margin: 2em -5.5%;
+    background: #f0f0f0;
+    padding: 1em 0;
+    text-align: center
+}
+
+@media (min-width: 50em){body.post>main article .more-buttons-holder {
+        width: 166%;
+        margin: 2em -33%
+    }
+}
+
+#google-auth {
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden
+}
+
+html {
+    overflow-x: hidden
+}
+
+body {
+    color: #444;
+    font: normal 18px/30px "Open Sans";
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative
+}
+
+body.disableMouse {
+    pointer-events: none
+}
+
+body.home>header {
+    border-top: 0.2em #e74c3c solid
+}
+
+body.home>header div#menu-trigger div.stripe {
+    background-color: #e74c3c
+}
+
+body.home>header div#menu-trigger:hover {
+    background-color: #e74c3c
+}
+
+body.home>header div#menu-trigger:hover div.stripe {
+    background-color: white
+}
+
+body.home>header div.loc span {
+    color: #e74c3c
+}
+
+body.home>main a {
+    color: #e74c3c
+}
+
+body.home>main div.chart-bar div.bar-container div.bar.main {
+    border-top-color: #e74c3c
+}
+
+body.home>main div.chart-bar div.bar-container div.bar.sub {
+    background-color: #e74c3c
+}
+
+body.home>main div.chart-bar div.bar-container.invert div.bar.main {
+    border-top-color: #18b3c3
+}
+
+body.home>main div.chart-bar div.bar-container.invert div.bar.sub {
+    background-color: #18b3c3
+}
+
+body.home>footer {
+    border-bottom: 0.2em #e74c3c solid
+}
+
+body.home>footer div.loc span {
+    color: #e74c3c
+}
+
+.internal-link-home {
+    color: #e74c3c;
+    display: inline;
+    font-weight: 700
+}
+
+.internal-link-home:hover {
+    border-bottom: 2px #e74c3c dotted
+}
+
+body.playground>header {
+    border-top: 0.2em #2980b9 solid
+}
+
+body.playground>header div#menu-trigger div.stripe {
+    background-color: #2980b9
+}
+
+body.playground>header div#menu-trigger:hover {
+    background-color: #2980b9
+}
+
+body.playground>header div#menu-trigger:hover div.stripe {
+    background-color: white
+}
+
+body.playground>header div.loc span {
+    color: #2980b9
+}
+
+body.playground>main a {
+    color: #2980b9
+}
+
+body.playground>main div.chart-bar div.bar-container div.bar.main {
+    border-top-color: #2980b9
+}
+
+body.playground>main div.chart-bar div.bar-container div.bar.sub {
+    background-color: #2980b9
+}
+
+body.playground>main div.chart-bar div.bar-container.invert div.bar.main {
+    border-top-color: #d67f46
+}
+
+body.playground>main div.chart-bar div.bar-container.invert div.bar.sub {
+    background-color: #d67f46
+}
+
+body.playground>footer {
+    border-bottom: 0.2em #2980b9 solid
+}
+
+body.playground>footer div.loc span {
+    color: #2980b9
+}
+
+.internal-link-playground {
+    color: #2980b9;
+    display: inline;
+    font-weight: 700
+}
+
+.internal-link-playground:hover {
+    border-bottom: 2px #2980b9 dotted
+}
+
+body.contact>header {
+    border-top: 0.2em #27ae60 solid
+}
+
+body.contact>header div#menu-trigger div.stripe {
+    background-color: #27ae60
+}
+
+body.contact>header div#menu-trigger:hover {
+    background-color: #27ae60
+}
+
+body.contact>header div#menu-trigger:hover div.stripe {
+    background-color: white
+}
+
+body.contact>header div.loc span {
+    color: #27ae60
+}
+
+body.contact>main a {
+    color: #27ae60
+}
+
+body.contact>main div.chart-bar div.bar-container div.bar.main {
+    border-top-color: #27ae60
+}
+
+body.contact>main div.chart-bar div.bar-container div.bar.sub {
+    background-color: #27ae60
+}
+
+body.contact>main div.chart-bar div.bar-container.invert div.bar.main {
+    border-top-color: #d8519f
+}
+
+body.contact>main div.chart-bar div.bar-container.invert div.bar.sub {
+    background-color: #d8519f
+}
+
+body.contact>footer {
+    border-bottom: 0.2em #27ae60 solid
+}
+
+body.contact>footer div.loc span {
+    color: #27ae60
+}
+
+.internal-link-contact {
+    color: #27ae60;
+    display: inline;
+    font-weight: 700
+}
+
+.internal-link-contact:hover {
+    border-bottom: 2px #27ae60 dotted
+}
+
+body.stats>header {
+    border-top: 0.2em #d35400 solid
+}
+
+body.stats>header div#menu-trigger div.stripe {
+    background-color: #d35400
+}
+
+body.stats>header div#menu-trigger:hover {
+    background-color: #d35400
+}
+
+body.stats>header div#menu-trigger:hover div.stripe {
+    background-color: white
+}
+
+body.stats>header div.loc span {
+    color: #d35400
+}
+
+body.stats>main a {
+    color: #d35400
+}
+
+body.stats>main div.chart-bar div.bar-container div.bar.main {
+    border-top-color: #d35400
+}
+
+body.stats>main div.chart-bar div.bar-container div.bar.sub {
+    background-color: #d35400
+}
+
+body.stats>main div.chart-bar div.bar-container.invert div.bar.main {
+    border-top-color: #2cabff
+}
+
+body.stats>main div.chart-bar div.bar-container.invert div.bar.sub {
+    background-color: #2cabff
+}
+
+body.stats>footer {
+    border-bottom: 0.2em #d35400 solid
+}
+
+body.stats>footer div.loc span {
+    color: #d35400
+}
+
+.internal-link-stats {
+    color: #d35400;
+    display: inline;
+    font-weight: 700
+}
+
+.internal-link-stats:hover {
+    border-bottom: 2px #d35400 dotted
+}
+
+body.blog>header {
+    border-top: 0.2em #16a085 solid
+}
+
+body.blog>header div#menu-trigger div.stripe {
+    background-color: #16a085
+}
+
+body.blog>header div#menu-trigger:hover {
+    background-color: #16a085
+}
+
+body.blog>header div#menu-trigger:hover div.stripe {
+    background-color: white
+}
+
+body.blog>header div.loc span {
+    color: #16a085
+}
+
+body.blog>main a {
+    color: #16a085
+}
+
+body.blog>main div.chart-bar div.bar-container div.bar.main {
+    border-top-color: #16a085
+}
+
+body.blog>main div.chart-bar div.bar-container div.bar.sub {
+    background-color: #16a085
+}
+
+body.blog>main div.chart-bar div.bar-container.invert div.bar.main {
+    border-top-color: #e95f7a
+}
+
+body.blog>main div.chart-bar div.bar-container.invert div.bar.sub {
+    background-color: #e95f7a
+}
+
+body.blog>footer {
+    border-bottom: 0.2em #16a085 solid
+}
+
+body.blog>footer div.loc span {
+    color: #16a085
+}
+
+.internal-link-blog {
+    color: #16a085;
+    display: inline;
+    font-weight: 700
+}
+
+.internal-link-blog:hover {
+    border-bottom: 2px #16a085 dotted
+}
+
+body>main {
+    font-size: 0.9em;
+    width: 90%;
+    margin-left: 5%
+}
+
+body>main div.header-image {
+    width: 111.2%;
+    margin-left: -5.55%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: margin-left 0.5s
+}
+
+body>main div.header-image:after {
+    content: attr(data-title);
+    background-color: #222;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: .7em;
+    font-weight: 700;
+    padding: .5em;
+    opacity: 0;
+    transition: opacity .5s
+}
+
+body>main div.header-image:hover:after {
+    opacity: .9
+}
+
+body>main div.header-image+section {
+    margin-top: 0
+}
+
+body>main div.header-image:before {
+    content: '';
+    display: block;
+    padding-bottom: 25%
+}
+
+body>main div.header-image.m-height:before {
+    padding-bottom: 30%
+}
+
+body>main div.header-image.l-height:before {
+    padding-bottom: 35%
+}
+
+body>main section {
+    margin-top: 5em
+}
+
+body>main div.chart-bar {
+    height: 10em;
+    border: 0.2em rgba(0, 0, 0, 0.1) solid
+}
+
+body>main div.chart-bar div.bar-container {
+    position: relative;
+    height: 100%;
+    display: inline-block
+}
+
+body>main div.chart-bar div.bar-container div.tooltip {
+    z-index: 2;
+    position: absolute;
+    padding: .5em;
+    font-size: .8em;
+    background-color: black;
+    color: white;
+    bottom: 50%;
+    display: none
+}
+
+body>main div.chart-bar div.bar-container div.tooltip p {
+    margin: 0;
+    white-space: nowrap
+}
+
+body>main div.chart-bar div.bar-container div.bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%
+}
+
+body>main div.chart-bar div.bar-container div.bar.main {
+    border-top: 0.2em black solid;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+body>main div.chart-bar div.bar-container div.bar.sub {
+    opacity: 0
+}
+
+body>main div.chart-bar div.bar-container:hover {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+body>main div.chart-bar div.bar-container:hover div.tooltip {
+    display: block
+}
+
+body>main div.chart-bar div.bar-container:hover div.bar.sub {
+    opacity: 1
+}
+
+body>main a {
+    text-decoration: none;
+    font-weight: 600
+}
+
+body>main a:hover {
+    text-decoration: underline
+}
+
+body>main div.announce {
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 1em
+}
+
+body#newpost textarea, body#newpost input[type=text], body#newpost input[type=email],
+body#newpost input[type=password], body#newpost input[type=search],
+body#newpost input[type=tel], body#newpost textarea {
+    width: 100%;
+    border: 0;
+    padding: 0
+}
+
+body#newpost textarea {
+    min-height: 20em
+}
+
+@media (min-width: 40em){body>main {
+        font-size: 1em
+    }
+}
+
+@media (min-width: 50em){body>main {
+        width: 60%;
+        margin-left: 20%
+    }
+}
+
+a.salir {
+           color: #006699; 
+		   text-decoration: none;
+		   font-size:13px; 
+		   font-family:Arial, Helvetica, sans-serif;
+		   }
+
+a.salir:active {
+           color: #006699; 
+		   text-decoration: none;
+		   font-size:13px; 
+		   font-family:Arial, Helvetica, sans-serif;
+         }
+
+a.salir:hover {
+           color: #C00; 
+		   text-decoration: none;
+		   font-size:13px; 
+		   font-family:Arial, Helvetica, sans-serif;
+}

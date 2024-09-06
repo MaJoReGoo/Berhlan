@@ -1,0 +1,23 @@
+#demoIzq, #demoDer { 
+border:0px dashed; 
+width:400px; 
+background-color:#EAEAEA; 
+text-align:left; 
+font-family:Arial, Helvetica, sans-serif;
+}
+
+#demoDer { float:left; }
+
+select { width:220px; }
+
+
+#demoIzq, #demoDerb { 
+border:0px dashed; 
+width:400px; 
+background-color:#EAEAEA; 
+text-align:left; 
+font-family:Arial, Helvetica, sans-serif;
+}
+
+#demoDerb { float:left; }
+
