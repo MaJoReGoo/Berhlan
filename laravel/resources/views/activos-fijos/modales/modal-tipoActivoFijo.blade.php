@@ -1,18 +1,5 @@
-<style>
-    .input-style {
-        padding: 10px;
-        border: 2px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-        color: #555;
-        outline: none;
-    }
+<link rel="stylesheet" type="text/css" href="{{ asset('css/Activos-fijos/modales/modal-tipoActivoFijo.blade.css') }}">
 
-    .input-style:focus {
-        border-color: #007bff;
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-    }
-</style>
 <form id="insertarTipoActivoFijoForm" method="POST" action="{{ route('insertar.tipoactivo') }}"
     enctype="multipart/form-data">
     @csrf
@@ -32,7 +19,7 @@
                         </Label>
                         <input name="descripcion" id="descripcion" class="input-style" type="text">
                         <button id="btn" type="submit" class="btn btn-success mb-2">
-                            <img src="{{ $server }}/images/add-task.png">
+                            <img src="{{ asset /images/add-task.png }}">
                             Crear tipo Documento
                             </img>
                         </button>

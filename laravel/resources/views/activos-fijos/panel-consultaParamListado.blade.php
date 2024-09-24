@@ -1,5 +1,5 @@
 <?php
-$server = '/Berhlan/public';
+{{ asset = '/Berhlan/public'}};
 
 use App\Models\TicActivos\PanelTipos;
 use App\Models\TicActivos\PanelMarcas;
@@ -30,24 +30,24 @@ use App\Models\Parametrizacion\PanelCentrosOp;
             rel='stylesheet' type='text/css'>
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/skin/default_skin/css/theme.css">
+        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.min.css">
+        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<?= $server ?>/panelfiles/assets/img/favicon.ico">
+        <link rel="shortcut icon" href="<{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 
         <!-- -------------- DataTables -------------- -->
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap4.min.css">
 
-        <script src="<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="<{{ asset ('/panelfiles/sweetalert/dist/sweetalert.min.js')}}"></script>
 
-        <link rel="stylesheet" href="<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.css">
+        <link rel="stylesheet" href="<{{ asset ('/panelfiles/sweetalert/dist/sweetalert.css')}}">
     </head>
 
     <body class="sales-stats-page">
@@ -100,7 +100,7 @@ use App\Models\Parametrizacion\PanelCentrosOp;
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/activos/consulta" class="btn btn-primary btn-sm ml10"
+                        <a href="<{{ asset ('/panel/activos/consulta" class="btn btn-primary btn-sm ml10')}}"
                             title="Activos TIC > Consulta parametrizada">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
@@ -256,7 +256,7 @@ use App\Models\Parametrizacion\PanelCentrosOp;
 
                                                             <td style="text-align: center">
                                                                 <button type="button" class="btn btn-default light"
-                                                                    onclick="window.location.href='<?= $server ?>/panel/activos/consulta/parametrizada/detalle/<?= $DatAct->id_activo ?>'"
+                                                                    onclick="window.location.href='<{{ asset ('/panel/activos/consulta/parametrizada/detalle/')}}<?= $DatAct->id_activo ?>'"
                                                                     title="Más información">
                                                                     <i class="fa fa-exclamation-circle fa-lg"
                                                                         style="color:#AEBF25;"></i>
@@ -283,27 +283,27 @@ use App\Models\Parametrizacion\PanelCentrosOp;
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/utility/utility.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/demo.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/main.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/pages/dashboard2.js"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
 
         <!-- -------------- DataTables -------------- -->
