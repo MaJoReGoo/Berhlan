@@ -1,32 +1,5 @@
-<style>
-    .insert-file-upload {
-        width: 250px;
-        cursor: pointer;
-        background-color: #ddd;
-        border-radius: 15px;
-        border: 2px dashed rgb(82, 82, 82);
-    }
+<link rel="stylesheet" type="text/css" href="{{ asset('css/archivo-digital/modales/modal-archivoHistorias.blade.css') }}">
 
-    .insert-file-upload .file-upload-design {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-    }
-
-    .insert-file-upload .browse-button {
-        background-color: rgb(82, 82, 82);
-        padding: 5px 15px;
-        border-radius: 10px;
-        color: white;
-        transition: all 0.3s;
-    }
-
-    .insert-file-upload .browse-button:hover {
-        background-color: rgb(14, 14, 14);
-    }
-</style>
 <form id="insertarDocumentosForm" method="POST" action="{{ route('insert.historias') }}" enctype="multipart/form-data">
     @csrf
     <div class="modal fade " id="adjuntarArchivos" tabindex="-1" data-backdrop="static" aria-labelledby="exampleModalLabel"
