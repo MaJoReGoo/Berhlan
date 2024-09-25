@@ -1,5 +1,5 @@
 <?php
-$server = '/Berhlan/public';
+
 use App\Models\Parametrizacion\PanelEmpleados;
 use App\Models\Parametrizacion\PanelCargos;
 use App\Models\Parametrizacion\PanelAreas;
@@ -30,7 +30,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
             rel='stylesheet' type='text/css'>
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/skin/default_skin/css/theme.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
         {{-- Importar styles y funcionamiento del Select2 --}}
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -39,29 +39,29 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
 
-        <script type="text/javascript" src="<?= $server ?>/panelfiles/select2/dist/js/select2.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/select2/dist/css/select2.min.css">
+        <script type="text/javascript" src="{{ asset ('/panelfiles/select2/dist/js/select2.min.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/select2/dist/css/select2.min.css')}}">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.min.css">
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<?= $server ?>/panelfiles/assets/img/favicon.ico">
+        <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
         <!-- -------------- DataTables -------------- -->
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap4.min.css">
         <!-- Editor -->
-        <script type="text/javascript" src="<?= $server ?>/panelfiles/ckeditor/ckeditor.js"></script>
+        <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
         <!-- SweetAlert2 -->
 
-        <script src="<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.min.js"></script>
-        <link rel="stylesheet" href="<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.css">
+        <script src="{{ asset ('/panelfiles/sweetalert/dist/sweetalert.min.js')}}"></script>
+        <link rel="stylesheet" href="{{ asset ('/panelfiles/sweetalert/dist/sweetalert.css')}}">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
@@ -78,116 +78,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
         </script>
 
 
-        <style>
-            .card-spacing {
-                padding: 30px;
-
-            }
-
-            .titulo {
-                width: 98%;
-                background-color: #003f6d;
-                padding: 0 10px;
-                text-transform: uppercase;
-                margin-top: 10px;
-                margin-left: 10px;
-                margin-bottom: 10px;
-                padding-right: 15px;
-            }
-
-            .title-background {
-                background: #1e5799;
-                /* Old browsers */
-                background: -moz-linear-gradient(45deg,
-                        #003f6d 0%,
-                        #003f6d 50%,
-                        #003f6d 51%,
-                        #ffffff 52%);
-                /* FF3.6-15 */
-                background: -webkit-linear-gradient(45deg,
-                        #003f6d 0%,
-                        #003f6d 50%,
-                        #003f6d 51%,
-                        #ffffff 52%);
-                /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(45deg,
-                        #003f6d 0%,
-                        #003f6d 50%,
-                        #003f6d 51%,
-                        #ffffff 52%);
-                /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1);
-                /* IE6-9 fallback on horizontal gradient */
-                border-bottom-color: #003f6d;
-                border-bottom-style: solid;
-                color: #ffffff;
-            }
-
-            .rqs {
-                margin-bottom: 20px;
-            }
-
-            /**********File Inputs**********/
-            .container-input {
-                text-align: center;
-                background: #282828;
-                border-top: 5px solid #c39f77;
-                padding: 50px 0;
-                border-radius: 6px;
-                width: 50%;
-                margin: 0 auto;
-                margin-bottom: 20px;
-            }
-
-            .inputfile {
-                width: 0.1px;
-                height: 0.1px;
-                opacity: 0;
-                overflow: hidden;
-                position: absolute;
-                z-index: -1;
-            }
-
-            .inputfile+label {
-                max-width: 80%;
-                font-size: 1.25rem;
-                font-weight: 700;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                cursor: pointer;
-                display: inline-block;
-                overflow: hidden;
-                padding: 0.625rem 1.25rem;
-            }
-
-            .inputfile+label svg {
-                width: 1em;
-                height: 1em;
-                vertical-align: middle;
-                fill: currentColor;
-                margin-top: -0.25em;
-                margin-right: 0.25em;
-            }
-
-            .iborrainputfile {
-                font-size: 16px;
-                font-weight: normal;
-                font-family: 'Lato';
-            }
-
-
-            /* style 3 */
-
-            .inputfile-3+label {
-                color: #000000;
-            }
-
-            .inputfile-3:focus+label,
-            .inputfile-3.has-focus+label,
-            .inputfile-3+label:hover {
-                color: #c39f77;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="{{ asset('/public/css/archivo-digital/panel-archivoInsercionDEscanear.blade.css') }}">
 
 
 
