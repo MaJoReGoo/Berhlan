@@ -1,10 +1,9 @@
 <?php
-$server ='/Berhlan/public';
 
 use App\Models\PanelLogin;
 ?>
 
-@foreach($DatosUsuario as $DatLog)
+
   <!DOCTYPE html>
   <html>
     <head>
@@ -23,16 +22,16 @@ use App\Models\PanelLogin;
       <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
       <!-- -------------- CSS - theme -------------- -->
-      <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/skin/default_skin/css/theme.css">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
       <!-- -------------- CSS - allcp forms -------------- -->
-      <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/allcp/forms/css/forms.min.css">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
 
       <!-- -------------- Plugins -------------- -->
-      <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
       <!-- -------------- Favicon -------------- -->
-      <link rel="shortcut icon" href="<?=$server?>/panelfiles/assets/img/favicon.png">
+      <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.png')}}">
 
       <style>
         a.cards:hover {
@@ -45,6 +44,8 @@ use App\Models\PanelLogin;
             transition: all 400ms ease;
         }
       </style>
+
+      acomodar estilos
 
     </head>
 
@@ -94,7 +95,7 @@ use App\Models\PanelLogin;
                         $idmenu = $DatMenu->id_menu;
                         ?>
                       @endforeach
-                      
+
                     </font>
                   </a>
                 </li>
@@ -118,9 +119,9 @@ use App\Models\PanelLogin;
 
                     @else
                     <div class="col-sm-6 col-xl-3">
-                    <a href="<?=$server?>/panel/<?=$DatMod->url?>" class="col-xs-12 panel panel-body cards" title="<?=$DatMod->nombre?>">
+                    <a href="{{ asset ('/panel/')}}<?=$DatMod->url?>" class="col-xs-12 panel panel-body cards" title="<?=$DatMod->nombre?>">
                       <div class="col-xs-12 ph10 text-center">
-                        <img src="<?=$server?>/panelfiles/iconos/<?=$DatMod->imagen?>.png" class="img-responsive mauto" alt="<?=$DatMod->nombre?>" style="width: 128px; height:128px;"/>
+                        <img src="{{ asset ('/panelfiles/iconos/')}}<?=$DatMod->imagen?>.png" class="img-responsive mauto" alt="<?=$DatMod->nombre?>" style="width: 128px; height:128px;"/>
                         <h6 class="text-muted" style="padding-top: 40px">
                           <font color="#2a2f43">
                             <?=$DatMod->nombre?>
@@ -143,29 +144,29 @@ use App\Models\PanelLogin;
       <!-- -------------- Scripts -------------- -->
 
       <!-- -------------- jQuery -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-      <script src="<?=$server?>/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+      <script src="{{ asset ('/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
       <!-- -------------- JvectorMap Plugin -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
      <!-- -------------- HighCharts Plugin -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
       <!-- -------------- Theme Scripts -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/utility/utility.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/demo/demo.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/main.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/pages/dashboard2.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
 
       <!-- -------------- Page JS -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
       <!-- -------------- /Scripts -------------- -->
     </body>
   </html>
-@endforeach
+

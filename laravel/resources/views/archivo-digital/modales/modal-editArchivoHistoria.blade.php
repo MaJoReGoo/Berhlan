@@ -54,7 +54,7 @@
 
         if (file.type.startsWith('image/') || file.type === 'application/pdf') {
             // Si es un archivo de imagen o PDF, mostrar la imagen predeterminada
-            imagePreview.src = '{{ env('API_BASE_URL') }}{{ $server }}/images/upload.png';
+            imagePreview.src = '{{ env('API_BASE_URL') }}{{ asset ('/images/upload.png')}}';
             previewContainer.style.display = 'block'; // Mostrar el contenedor de vista previa
             imagePreview.style.display = 'block'; // Mostrar la imagen
         }

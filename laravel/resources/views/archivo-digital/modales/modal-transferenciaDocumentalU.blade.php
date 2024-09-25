@@ -51,7 +51,7 @@
                         <div style="float: right; padding-right: 20px">
                             <a type="submit" type="button" id="addRow"class="btn btn-success"
                                 style="margin-bottom: 3px">
-                                <img src="{{ $server }}/images/plus.png">
+                                <img src="{{ asset ('/images/plus.png')}}">
 
                                 </img>
                                 <span class="nav-text">
@@ -60,7 +60,7 @@
                             </a>
                             <a type="submit" type="button" id="removeRow"class="btn btn-danger"
                                 style="margin-bottom: 3px">
-                                <img src="{{ $server }}/images/minus.png">
+                                <img src="{{ asset ('/images/minus.png')}}">
                                 </img>
                                 <span class="nav-text">
                                     Eliminar

@@ -59,7 +59,7 @@
     function cargarDatos() {
         let idFuid = document.getElementById('id_fuid_h').value;
         fetch(
-                `{{ env('API_BASE_URL') }}{{ $server }}/panel/archivo/transferenciad/escanear/` + idFuid
+                `{{ env('API_BASE_URL') }}{{ asset ('/panel/archivo/transferenciad/escanear/')}}` + idFuid
             )
             .then(response => response.json())
             .then(data => {

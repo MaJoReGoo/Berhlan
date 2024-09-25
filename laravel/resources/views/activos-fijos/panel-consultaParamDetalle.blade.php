@@ -97,7 +97,7 @@ use App\Models\Parametrizacion\PanelEmpresas;
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="{{ asset ('/panel/activos/consulta/parametrizada"')}}
+                                <a href="{{ asset ('/panel/activos/consulta/parametrizada')}}"
                                     title="Activos TIC > Consulta parametrizada > Resultado">
                                     <font color="#34495e">
                                         Activos TIC > Consulta parametrizada > Resultado >

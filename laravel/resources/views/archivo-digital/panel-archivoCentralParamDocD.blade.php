@@ -29,7 +29,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
             rel='stylesheet' type='text/css'>
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
         {{-- Importar styles y funcionamiento del Select2 --}}
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -38,29 +38,29 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
 
-        <script type="text/javascript" src="<{{ asset ('/panelfiles/select2/dist/js/select2.min.js')}}"></script>
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/select2/dist/css/select2.min.css')}}">
+        <script type="text/javascript" src="{{ asset ('/panelfiles/select2/dist/js/select2.min.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/select2/dist/css/select2.min.css')}}">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
         <!-- -------------- DataTables -------------- -->
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap4.min.css">
         <!-- Editor -->
-        <script type="text/javascript" src="<{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
+        <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
         <!-- SweetAlert2 -->
 
-        <script src="<{{ asset ('/panelfiles/sweetalert/dist/sweetalert.min.js')}}"></script>
-        <link rel="stylesheet" href="<{{ asset ('/panelfiles/sweetalert/dist/sweetalert.css')}}">
+        <script src="{{ asset ('/panelfiles/sweetalert/dist/sweetalert.min.js')}}"></script>
+        <link rel="stylesheet" href="{{ asset ('/panelfiles/sweetalert/dist/sweetalert.css')}}">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
@@ -69,7 +69,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
         <script src="https://unpkg.com/pdfjs-dist/"></script>
 
 
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/archivo-digital/panel-archivoCentralParamDocD.blade.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/public/css/archivo-digital/panel-archivoCentralParamDocD.blade.css') }}">
 
         @include('archivo-digital.modales.modal-transferenciaDocuEscaneoD')
     </head>
@@ -109,7 +109,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<{{ asset ('/panel/archivo/consultas" title="Inicio')}}">
+                                <a href="{{ asset ('/panel/archivo/consultas')}}" title="Inicio">
                                     <font color="#34495e">
                                         Archivo digital >
                                     </font>
@@ -123,7 +123,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<{{ asset ('/panel/archivo/consultas" class="btn btn-primary btn-sm ml10')}}"
+                        <a href="{{ asset ('/panel/archivo/consultas')}}" class="btn btn-primary btn-sm ml10"
                             title="Inicio">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
@@ -160,14 +160,14 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
                                         <div class="col-md-4 " style="display:flex; justify-content: flex-end">
                                             @if (!is_null($sql[0]->dependencia))
                                                 <a id="btn_descargar" class="btn btn-primary mb-2"
-                                                    href="{{ $server }}/panel/archivo/consultas/parametrizada/dependencia/{{ $sql[0]->dependencia }}">
-                                                    <img src="{{ $server }}/images/dow-folder.png">
+                                                    href="{{ asset ('/panel/archivo/consultas/parametrizada/dependencia/')}}{{ $sql[0]->dependencia }}">
+                                                    <img src="{{ asset ('/images/dow-folder.png')}}">
                                                     Descargar Dependencia
                                                 </a>
                                             @else
                                                 <a id="btn_descargar" class="btn btn-primary mb-2"
-                                                    href="{{ $server }}/panel/archivo/consultas/parametrizada/dependencia/{{ $sql[1]->dependencia }}">
-                                                    <img src="{{ $server }}/images/dow-folder.png">
+                                                    href="{{ asset ('/panel/archivo/consultas/parametrizada/dependencia/')}}{{ $sql[1]->dependencia }}">
+                                                    <img src="{{ asset ('/images/dow-folder.png')}}">
                                                     Descargar Dependencia
                                                 </a>
                                             @endif
@@ -213,16 +213,16 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
                                                         <td>
                                                             @if($DatReFu->ruta != '')
                                                             <a type="button" class="btn btn-secondary"
-                                                                href="{{ $server }}/panel/archivo/consultas/parametrizada/registro/{{ $DatReFu->id_registro }}"
+                                                                href="{{ asset ('/panel/archivo/consultas/parametrizada/registro/')}}{{ $DatReFu->id_registro }}"
                                                                 title="Descargar">
-                                                                <img src="{{ $server }}/images/dow-file.png">
+                                                                <img src="{{ asset ('/images/dow-file.png')}}">
                                                                 </img>
                                                             </a>
                                                             @else
                                                             <a type="button" class="btn btn-secondary"
-                                                                href="{{ $server }}/panel/archivo/consultas/parametrizada/registro/{{ $DatReFu->id_registro }}"
+                                                                href="{{ asset ('/panel/archivo/consultas/parametrizada/registro/')}}{{ $DatReFu->id_registro }}"
                                                                 title="Descargar" disabled>
-                                                                <img src="{{ $server }}/images/dow-file.png">
+                                                                <img src="{{ asset ('/images/dow-file.png')}}">
                                                                 </img>
                                                             </a>
                                                             @endif
@@ -262,27 +262,27 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
         <!-- -------------- DataTables -------------- -->
         <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>

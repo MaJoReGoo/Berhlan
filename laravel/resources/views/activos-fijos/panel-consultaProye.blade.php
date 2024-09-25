@@ -25,20 +25,20 @@ use App\Models\TicActivos\PanelTipos;
       <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
       <!-- -------------- CSS - theme -------------- -->
-      <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
       <!-- -------------- CSS - allcp forms -------------- -->
-      <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
-      <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
       <!-- -------------- Plugins -------------- -->
-      <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
       <!-- -------------- Favicon -------------- -->
-      <link rel="shortcut icon" href="<{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
+      <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 
       <!-- Editor -->
-      <script type="text/javascript" src="<{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
+      <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
     </head>
 
     <body>
@@ -76,7 +76,7 @@ use App\Models\TicActivos\PanelTipos;
             <div class="topbar-left">
               <ul class="nav nav-list nav-list-topbar pull-left">
                 <li class="active">
-                  <a href="<{{ asset ('/panel/menu/112')}}" title="Activos TIC">
+                  <a href="{{ asset ('/panel/menu/112')}}" title="Activos TIC">
                     <font color="#34495e">
                       Activos Fijos >
                     </font>
@@ -89,7 +89,7 @@ use App\Models\TicActivos\PanelTipos;
             </div>
 
             <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-              <a href="<{{ asset ('/panel/menu/112')}}" class="btn btn-primary btn-sm ml10" title="Activos TIC">
+              <a href="{{ asset ('/panel/menu/112')}}" class="btn btn-primary btn-sm ml10" title="Activos TIC">
                 REGRESAR &nbsp;
                 <span class="fa fa-arrow-left"></span>
               </a>

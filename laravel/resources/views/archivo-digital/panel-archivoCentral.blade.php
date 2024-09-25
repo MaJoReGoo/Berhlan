@@ -31,20 +31,20 @@ use App\Models\TicActivos\PanelLicencias;
             rel='stylesheet' type='text/css'>
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 
         <!-- Editor -->
-        <script type="text/javascript" src="<{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
+        <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
 
         {{-- Importar styles y funcionamiento del Select2 --}}
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -53,8 +53,8 @@ use App\Models\TicActivos\PanelLicencias;
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
 
-        <script type="text/javascript" src="<{{ asset ('/panelfiles/select2/dist/js/select2.min.js')}}"></script>
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/select2/dist/css/select2.min.css')}}">
+        <script type="text/javascript" src="{{ asset ('/panelfiles/select2/dist/js/select2.min.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/select2/dist/css/select2.min.css')}}">
         <script>
             jQuery(document).ready(function($) {
                 $(".select2_init").select2({
@@ -65,7 +65,7 @@ use App\Models\TicActivos\PanelLicencias;
         </script>
     </head>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/archivo-digital/panel-archivoCentral.blade.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/public/css/archivo-digital/panel-archivoCentral.blade.css') }}">
 
     <body>
         <!-- -------------- Body Wrap  -------------- -->
@@ -102,7 +102,7 @@ use App\Models\TicActivos\PanelLicencias;
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<{{ asset ('/panel/menu/108" title="Activos TIC')}}">
+                                <a href="{{ asset ('/panel/menu/108')}}" title="Activos TIC">
                                     <font color="#34495e">
                                         Archivo Central >
                                     </font>
@@ -115,7 +115,7 @@ use App\Models\TicActivos\PanelLicencias;
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<{{ asset ('/panel/menu/108" class="btn btn-primary btn-sm ml10')}}" title="Activos TIC">
+                        <a href="{{ asset ('/panel/menu/108')}}" class="btn btn-primary btn-sm ml10" title="Activos TIC">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
                         </a>
@@ -250,7 +250,7 @@ use App\Models\TicActivos\PanelLicencias;
                                                         <br><br>
                                                         <button id="btn_adjuntar" type="submit"
                                                             class="btn btn-primary mb-2">
-                                                            <img src="{{ $server }}/images/informacion.png">
+                                                            <img src="{{ asset ('/images/informacion.png')}}">
                                                             Consultar
                                                             </img>
                                                         </button>
@@ -275,27 +275,27 @@ use App\Models\TicActivos\PanelLicencias;
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/pages/allcp_forms-elements.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/pages/allcp_forms-elements.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
         <!-- -------------- /Scripts -------------- -->
     </body>

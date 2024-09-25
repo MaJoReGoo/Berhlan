@@ -125,7 +125,7 @@ use App\Models\TicActivos\PanelSoftware;
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<{{ asset ('/panel/menu/104" title="Activos TIC')}}">
+                                <a href="{{ asset ('/panel/menu/104')}}" title="Activos TIC">
                                     <font color="#34495e">
                                         Activos Fijos >
                                     </font>
@@ -144,7 +144,7 @@ use App\Models\TicActivos\PanelSoftware;
                             Crear Tipo Activo Fijo
                             </img>
                         </button>
-                        <a href="{{ asset ('/panel/menu/104" class="btn btn-primary btn-sm ml10')}}" title="Activos TIC">
+                        <a href="{{ asset ('/panel/menu/104')}}" class="btn btn-primary btn-sm ml10" title="Activos TIC">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
                         </a>

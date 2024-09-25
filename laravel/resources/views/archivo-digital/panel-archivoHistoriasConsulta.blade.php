@@ -30,7 +30,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
             rel='stylesheet' type='text/css'>
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
         {{-- Importar styles y funcionamiento del Select2 --}}
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -39,18 +39,18 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
 
-        <script type="text/javascript" src="<{{ asset ('/panelfiles/select2/dist/js/select2.min.js')}}"></script>
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/select2/dist/css/select2.min.css')}}">
+        <script type="text/javascript" src="{{ asset ('/panelfiles/select2/dist/js/select2.min.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/select2/dist/css/select2.min.css')}}">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
         <!-- -------------- DataTables -------------- -->
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap4.min.css">
@@ -60,8 +60,8 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
 
         <!-- SweetAlert2 -->
 
-        <script src="<{{ asset ('/panelfiles/sweetalert/dist/sweetalert.min.js')}}"></script>
-        <link rel="stylesheet" href="<{{ asset ('/panelfiles/sweetalert/dist/sweetalert.css')}}">
+        <script src="{{ asset ('/panelfiles/sweetalert/dist/sweetalert.min.js')}}"></script>
+        <link rel="stylesheet" href="{{ asset ('/panelfiles/sweetalert/dist/sweetalert.css')}}">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
@@ -127,7 +127,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<{{ asset ('/panel/menu/108" title="Inicio')}}">
+                                <a href="{{ asset ('/panel/menu/108')}}" title="Inicio">
                                     <font color="#34495e">
                                         Archivo digital >
                                     </font>
@@ -141,7 +141,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<{{ asset ('/panel/menu/108" class="btn btn-primary btn-sm ml10')}}" title="Inicio">
+                        <a href="{{ asset ('/panel/menu/108')}}" class="btn btn-primary btn-sm ml10" title="Inicio">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
                         </a>
@@ -183,7 +183,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
                                                     <div class="form-group">
                                                         <button type="button" id="cargarEmpleadoBtn"
                                                             class="btn btn-primary mb-2">
-                                                            <img src="{{ $server }}/images/slect.png">
+                                                            <img src="{{ asset ('/images/slect.png')}}">
                                                             Selecione
                                                             Empleado
                                                             </img>
@@ -194,7 +194,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
                                             <div class="col-md-3">
                                                 <button type="button" id="cargarEmpleadoBtn"
                                                     class="btn btn-secondary mb-2" data-toggle="modal" data-target="#creacionTipoDoc">
-                                                    <img src="{{ $server }}/images/type_documents.png">
+                                                    <img src="{{ asset ('/images/type_documents.png')}}">
                                                     Crear Tipo Documento
                                                     </img>
                                                 </button>
@@ -216,14 +216,14 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
 
                                                 <button id="btn_descargar" class="btn btn-primary mb-2"
                                                     style="display: none;" onclick="obtenerid()">
-                                                    <img src="{{ $server }}/images/dow-folder.png">
+                                                    <img src="{{ asset ('/images/dow-folder.png')}}">
                                                     Descargar Historia
                                                 </button>
 
                                                 <button id="btn_adjuntar" type="button" class="btn btn-primary mb-2"
                                                     data-toggle="modal" data-target="#adjuntarArchivos"
                                                     onclick="copiarEmpleado()">
-                                                    <img src="{{ $server }}/images/add-task.png">
+                                                    <img src="{{ asset ('/images/add-task.png')}}">
                                                     Adjuntar Archivos
                                                     </img>
                                                 </button>
@@ -279,27 +279,27 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
         <!-- -------------- DataTables -------------- -->
         <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
@@ -461,21 +461,21 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
                                         <td style="text-align:center;width: 186px ">
                                             <button type="button" class="btn btn-secondary" data-id="${doc.id}"  id="documento" data-toggle="modal" data-target="#EditArchivo" onclick="setDocumentoId(${doc.id});copiarEmpleado2();"
                                             title="Editar">
-                                                <img src="{{ $server }}/images/edit-file.png" >
+                                                <img src="{{ asset ('/images/edit-file.png')}}" >
                                                 </img>
                                             </button>
                                             <button type="button" class="btn btn-secondary"  data-id="${doc.id}"
-                                            onclick="descargarArchivo('{{ $server }}/archivos/ArchivoDigital/Historias/${data.empleado[0].identificacion}/${doc.documento}')"
+                                            onclick="descargarArchivo('{{ asset ('/archivos/ArchivoDigital/Historias/')}}${data.empleado[0].identificacion}/${doc.documento}')"
 
                                                                     title="Descargar">
-                                                <img src="{{ $server }}/images/dow-file.png">
+                                                <img src="{{ asset ('/images/dow-file.png')}}">
                                                 </img>
                                             </button>
                                             <button type="button" class="btn btn-secondary"  data-id="${doc.id}"
-                                            onclick="window.open('{{ $server }}/archivos/ArchivoDigital/Historias/${data.empleado[0].identificacion}/${doc.documento}','_blank')"
+                                            onclick="window.open('{{ asset ('/archivos/ArchivoDigital/Historias/')}}${data.empleado[0].identificacion}/${doc.documento}','_blank')"
 
                                                                     title="Ver">
-                                                <img src="{{ $server }}/images/view-file.png">
+                                                <img src="{{ asset ('/images/view-file.png')}}">
                                                 </img>
                                             </button>
                                         </td>

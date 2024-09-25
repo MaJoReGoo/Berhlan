@@ -19,7 +19,7 @@
                         </Label>
                         <input name="descripcion_td" id="descripcion_td" class="input-style" type="text" required>
                         <button id="btn" type="submit" class="btn btn-success mb-2">
-                            <img src="{{ $server }}/images/add-task.png">
+                            <img src="{{ asset ('/images/add-task.png')}}">
                             Crear tipo Documento
                             </img>
                         </button>

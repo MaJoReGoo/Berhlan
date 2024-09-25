@@ -64,7 +64,7 @@
     function cargarDatos() {
         let idSolicitud = document.getElementById('id_solicitud_h').value;
         fetch(
-                `{{ env('API_BASE_URL') }}{{ $server }}/panel/archivo/inserciond/escaner/` + idSolicitud
+                `{{ env('API_BASE_URL') }}{{ asset ('/panel/archivo/inserciond/escaner/')}}` + idSolicitud
             )
             .then(response => response.json())
             .then(data => {

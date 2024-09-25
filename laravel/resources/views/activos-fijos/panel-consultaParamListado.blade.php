@@ -255,7 +255,7 @@ use App\Models\Parametrizacion\PanelCentrosOp;
 
                                                             <td style="text-align: center">
                                                                 <button type="button" class="btn btn-default light"
-                                                                    onclick="window.location.href='<{{ asset ('/panel/activos/consulta/parametrizada/detalle/')}}<?= $DatAct->id_activo ?>'"
+                                                                    onclick="window.location.href='{{ asset ('/panel/activos/consulta/parametrizada/detalle/')}}<?= $DatAct->id_activo ?>'"
                                                                     title="Más información">
                                                                     <i class="fa fa-exclamation-circle fa-lg"
                                                                         style="color:#AEBF25;"></i>
