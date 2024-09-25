@@ -1,5 +1,5 @@
 <?php
-$server = '/Berhlan/public';
+
 use App\Models\Parametrizacion\PanelEmpleados;
 use App\Models\Parametrizacion\PanelCargos;
 use App\Models\Parametrizacion\PanelAreas;

@@ -106,8 +106,8 @@ use App\Models\TicActivos\PanelLicencias;
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<{{ asset ('/panel/menu/104" title="Activos TIC">
-                                    <font color="#34495e')}}">
+                                <a href="<{{ asset ('/panel/menu/104')}}" title="Activos TIC">
+                                    <font color="#34495e">
                                         Activos Fijos >
                                     </font>
                                     <font color="#b4c056">
@@ -119,8 +119,8 @@ use App\Models\TicActivos\PanelLicencias;
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<{{ asset ('/panel/menu/104" class="btn btn-primary btn-sm ml10"
-                            title="Activos TIC')}}">
+                        <a href="<{{ asset ('/panel/menu/104')}}" class="btn btn-primary btn-sm ml10"
+                            title="Activos TIC">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
                         </a>

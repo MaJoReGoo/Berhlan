@@ -430,7 +430,7 @@ use App\Models\TicActivos\PanelSoftware;
                                                                     <button id="btn_adjuntar" type="submit"
                                                                         class="btn btn-primary mb-2">
                                                                         <img
-                                                                            src="{{ $server }}/images/agregar-boton.png">
+                                                                            src="{{ asset ('/images/agregar-boton.png')}}">
                                                                         Ingresar Activo Fijo
                                                                         </img>
                                                                     </button>
