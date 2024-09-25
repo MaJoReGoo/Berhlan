@@ -1,18 +1,5 @@
-<style>
-    .input-style {
-        padding: 10px;
-        border: 2px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-        color: #555;
-        outline: none;
-    }
+<link rel="stylesheet" type="text/css" href="{{ asset('css/archivo-digital/modales/modal-archivoTipoDocumentos.blade.css') }}">
 
-    .input-style:focus {
-        border-color: #007bff;
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-    }
-</style>
 <form id="insertarTipoDocumentosForm" method="POST" action="{{ route('insert.tipodocumento') }}"
     enctype="multipart/form-data">
     @csrf

@@ -1,5 +1,5 @@
 <?php
-{{ asset = '/Berhlan/public' }};
+
 
 use App\Models\Parametrizacion\PanelEmpleados;
 use App\Models\Parametrizacion\PanelCargos;
@@ -32,20 +32,20 @@ use App\Models\TicActivos\PanelSoftware;
             rel='stylesheet' type='text/css'>
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 
         <!-- Editor -->
-        <script type="text/javascript" src="<{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
+        <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
 
         {{-- Importar styles y funcionamiento del Select2 --}}
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -54,13 +54,13 @@ use App\Models\TicActivos\PanelSoftware;
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
 
-        <script type="text/javascript" src="<{{ asset ('/panelfiles/select2/dist/js/select2.min.js')}}"></script>
-        <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/select2/dist/css/select2.min.css')}}">
+        <script type="text/javascript" src="{{ asset ('/panelfiles/select2/dist/js/select2.min.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/select2/dist/css/select2.min.css')}}">
 
         <!-- SweetAlert2 -->
 
-        <script src="<{{ asset ('/panelfiles/sweetalert/dist/sweetalert.min.js')}}"></script>
-        <link rel="stylesheet" href="<{{ asset ('/panelfiles/sweetalert/dist/sweetalert.css')}}">
+        <script src="{{ asset ('/panelfiles/sweetalert/dist/sweetalert.min.js')}}"></script>
+        <link rel="stylesheet" href="{{ asset ('/panelfiles/sweetalert/dist/sweetalert.css')}}">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
@@ -144,7 +144,7 @@ use App\Models\TicActivos\PanelSoftware;
                             Crear Tipo Activo Fijo
                             </img>
                         </button>
-                        <a href="<{{ asset ('/panel/menu/104" class="btn btn-primary btn-sm ml10')}}" title="Activos TIC">
+                        <a href="{{ asset ('/panel/menu/104" class="btn btn-primary btn-sm ml10')}}" title="Activos TIC">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
                         </a>
@@ -456,27 +456,27 @@ use App\Models\TicActivos\PanelSoftware;
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/pages/allcp_forms-elements.js')}}"></script>
-        <script src="<{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/pages/allcp_forms-elements.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
          <!-- -------------- DataTables -------------- -->
          <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>

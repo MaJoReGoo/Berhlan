@@ -1,5 +1,4 @@
 <?php
-{{ asset = '/Berhlan/public'}};
 
 use App\Models\Parametrizacion\PanelEmpresas;
 use App\Models\Parametrizacion\PanelEmpleados;
@@ -29,20 +28,20 @@ use App\Models\TicActivos\PanelActivos;
       <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
       <!-- -------------- CSS - theme -------------- -->
-      <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css') }}">
 
       <!-- -------------- CSS - allcp forms -------------- -->
-      <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css') }}">
-      <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css') }}">
 
       <!-- -------------- Plugins -------------- -->
-      <link rel="stylesheet" type="text/css" href="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css') }}">
 
       <!-- -------------- Favicon -------------- -->
-      <link rel="shortcut icon" href="<{{ asset ('/panelfiles/assets/img/favicon.ico') }}">
+      <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico') }}">
 
       <!-- Editor -->
-      <script type="text/javascript" src="<{{ asset ('/panelfiles/ckeditor/ckeditor.js') }}"></script>
+      <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js') }}"></script>
     </head>
 
     <body>
@@ -81,7 +80,7 @@ use App\Models\TicActivos\PanelActivos;
             <div class="topbar-left">
               <ul class="nav nav-list nav-list-topbar pull-left">
                 <li class="active">
-                  <a href="<{{asset ('/panel/activos/consulta/parametrizada/detalle/') }}{{$DatosActivo[0]->id_activo}}" title="Activos TIC">
+                  <a href="{{asset ('/panel/activos/consulta/parametrizada/detalle/') }}{{$DatosActivo[0]->id_activo}}" title="Activos TIC">
                     <font color="#34495e">
                       Activos TIC >
                     </font>
@@ -94,7 +93,7 @@ use App\Models\TicActivos\PanelActivos;
             </div>
 
             <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-              <a href="<{{ asset ('/panel/activos/consulta/parametrizada/detalle/') }}{{$DatosActivo[0]->id_activo}}" class="btn btn-primary btn-sm ml10" title="Activos TIC">
+              <a href="{{ asset ('/panel/activos/consulta/parametrizada/detalle/') }}{{$DatosActivo[0]->id_activo}}" class="btn btn-primary btn-sm ml10" title="Activos TIC">
                 REGRESAR &nbsp;
                 <span class="fa fa-arrow-left"></span>
               </a>
@@ -335,27 +334,27 @@ use App\Models\TicActivos\PanelActivos;
       <!-- -------------- Scripts -------------- -->
 
       <!-- -------------- jQuery -------------- -->
-      <script src="<{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js') }}"></script>
-      <script src="<{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js') }}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js') }}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js') }}"></script>
 
       <!-- -------------- JvectorMap Plugin -------------- -->
-      <script src="<{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js') }}"></script>
-      <script src="<{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js') }}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js') }}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js') }}"></script>
 
       <!-- -------------- HighCharts Plugin -------------- -->
-      <script src="<{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js') }}"></script>
-      <script src="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js') }}"></script>
-      <script src="<{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js') }}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js') }}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js') }}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js') }}"></script>
 
       <!-- -------------- Theme Scripts -------------- -->
-      <script src="<{{ asset ('/panelfiles/assets/js/utility/utility.js') }}"></script>
-      <script src="<{{ asset ('/panelfiles/assets/js/demo/demo.js') }}"></script>
-      <script src="<{{ asset ('/panelfiles/assets/js/main.js') }}"></script>
-      <script src="<{{ asset ('/panelfiles/assets/js/pages/allcp_forms-elements.js') }}"></script>
-      <script src="<{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js') }}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js') }}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js') }}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/main.js') }}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/pages/allcp_forms-elements.js') }}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js') }}"></script>
 
       <!-- -------------- Page JS -------------- -->
-      <script src="<{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js') }}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js') }}"></script>
       <!-- -------------- /Scripts -------------- -->
     </body>
   </html>
