@@ -1,5 +1,4 @@
 <?php
-$server = '/Berhlan/public';
 
 use App\Models\Parametrizacion\PanelEmpleados;
 use App\Models\Parametrizacion\PanelCargos;
@@ -23,20 +22,20 @@ use App\Models\Parametrizacion\PanelCargos;
       <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
       <!-- -------------- CSS - theme -------------- -->
-      <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/skin/default_skin/css/theme.css">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
       <!-- -------------- CSS - allcp forms -------------- -->
-      <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/allcp/forms/css/forms.min.css">
-      <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/allcp/forms/css/forms.css">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
       <!-- -------------- Plugins -------------- -->
-      <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
       <!-- -------------- Favicon -------------- -->
-      <link rel="shortcut icon" href="<?=$server?>/panelfiles/assets/img/favicon.ico">
+      <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 
       <!-- Editor -->
-      <script type="text/javascript" src="<?=$server?>/panelfiles/ckeditor/ckeditor.js"></script>
+      <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
     </head>
 
     <body>
@@ -155,7 +154,7 @@ use App\Models\Parametrizacion\PanelCargos;
                                 if($DatosMuestra[0]->archivo != '')
                                  {
                                   ?>
-                                  <button type="button" style="background:#f7f9f9;" class="btn btn-default light" onclick="window.open('<?=$server?>/archivos/Bpack/Muestras/<?=$DatosMuestra[0]->archivo?>','_blank')" title="<?=$DatosMuestra[0]->archivo?>">
+                                  <button type="button" style="background:#f7f9f9;" class="btn btn-default light" onclick="window.open('{{ asset ('/archivos/Bpack/Muestras/')}}<?=$DatosMuestra[0]->archivo?>','_blank')" title="<?=$DatosMuestra[0]->archivo?>">
                                     <i class="fa fa-file-image-o fa-lg" style="color:#b4c056;"></i>
                                   </button>
                                   <?php
@@ -271,27 +270,27 @@ use App\Models\Parametrizacion\PanelCargos;
       <!-- -------------- Scripts -------------- -->
 
       <!-- -------------- jQuery -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
       <!-- -------------- JvectorMap Plugin -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
       <!-- -------------- HighCharts Plugin -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
       <!-- -------------- Theme Scripts -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/utility/utility.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/demo/demo.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/main.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/pages/allcp_forms-elements.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/pages/allcp_forms-elements.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
 
       <!-- -------------- Page JS -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
       <!-- -------------- /Scripts -------------- -->
 
     </body>

@@ -1,5 +1,4 @@
 <?php
-$server = '/Berhlan/public';
 
 use App\Models\Parametrizacion\PanelCargos;
 use App\Models\Parametrizacion\PanelEmpleados;
@@ -28,20 +27,20 @@ use App\Models\Bpack\PanelItemEtiquetas;
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
   <!-- -------------- CSS - theme -------------- -->
-  <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/skin/default_skin/css/theme.css">
+  <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
   <!-- -------------- CSS - allcp forms -------------- -->
-  <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.min.css">
-  <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.css">
+  <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
   <!-- -------------- Plugins -------------- -->
-  <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
   <!-- -------------- Favicon -------------- -->
-  <link rel="shortcut icon" href="<?= $server ?>/panelfiles/assets/img/favicon.ico">
+  <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 
   <!-- Editor -->
-  <script type="text/javascript" src="<?= $server ?>/panelfiles/ckeditor/ckeditor.js"></script>
+  <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
 
 </head>
 
@@ -80,7 +79,7 @@ use App\Models\Bpack\PanelItemEtiquetas;
         <div class="topbar-left">
           <ul class="nav nav-list nav-list-topbar pull-left">
             <li class="active">
-              <a href="<?= $server ?>/panel/bpack/pensherpa" title="Bcloud > Solicitudes pendientes de > Solicitudes pendientes de aprobación sherpas digitales">
+              <a href="{{ asset ('/panel/bpack/pensherpa')}}" title="Bcloud > Solicitudes pendientes de > Solicitudes pendientes de aprobación sherpas digitales">
                 <font color="#34495e">
                   Bcloud > Solicitudes pendientes de > Solicitudes pendientes de aprobación sherpas digitales >
                 </font>
@@ -93,7 +92,7 @@ use App\Models\Bpack\PanelItemEtiquetas;
         </div>
 
         <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-          <a href="<?= $server ?>/panel/bpack/pensherpa" class="btn btn-primary btn-sm ml10" title="Bcloud > Solicitudes pendientes de > Solicitudes pendientes de aprobación sherpas digitales">
+          <a href="{{ asset ('/panel/bpack/pensherpa')}}" class="btn btn-primary btn-sm ml10" title="Bcloud > Solicitudes pendientes de > Solicitudes pendientes de aprobación sherpas digitales">
             REGRESAR &nbsp;
             <span class="fa fa-arrow-left"></span>
           </a>
@@ -181,7 +180,7 @@ use App\Models\Bpack\PanelItemEtiquetas;
                           echo "</td>";
                           echo "<td>";
                         ?>
-                          <button type="button" style="background:#f7f9f9;" class="btn btn-default light" onclick="window.open('<?= $server ?>/archivos/Bpack/Solicitudes/<?= $DatosSolicitud[0]->artes . "?" . date('i:s') ?>','_blank')" title="<?= $DatosSolicitud[0]->artes ?>">
+                          <button type="button" style="background:#f7f9f9;" class="btn btn-default light" onclick="window.open('{{ asset ('/archivos/Bpack/Solicitudes/')}}<?= $DatosSolicitud[0]->artes . "?" . date('i:s') ?>','_blank')" title="<?= $DatosSolicitud[0]->artes ?>">
                             <i class="fa fa-file-image-o fa-lg" style="color:#b4c056;"></i>
                           </button>
                           <label class="field prepend-icon append-button file">
@@ -204,7 +203,7 @@ use App\Models\Bpack\PanelItemEtiquetas;
                           echo "<td>";
                           if ($DatosSolicitud[0]->formato != '') {
                           ?>
-                            <button type="button" style="background:#f7f9f9;" class="btn btn-default light" onclick="window.open('<?= $server ?>/archivos/Bpack/Solicitudes/<?= $DatosSolicitud[0]->formato . "?" . date('i:s') ?>','_blank')" title="<?= $DatosSolicitud[0]->formato ?>">
+                            <button type="button" style="background:#f7f9f9;" class="btn btn-default light" onclick="window.open('{{ asset ('/archivos/Bpack/Solicitudes/')}}<?= $DatosSolicitud[0]->formato . "?" . date('i:s') ?>','_blank')" title="<?= $DatosSolicitud[0]->formato ?>">
                               <i class="fa fa-file-image-o fa-lg" style="color:#b4c056;"></i>
                             </button>
                           <?php
@@ -392,7 +391,7 @@ use App\Models\Bpack\PanelItemEtiquetas;
                         if ($inicio == "SBA") {
                         ?>
                           <td align="center">
-                            <button type="button" style="background:#f7f9f9;" class="btn btn-default light" onclick="window.open('<?= $server ?>/archivos/Bpack/Solicitudes/<?= $DatSol->ruta_arte . "?" . date('i:s') ?>','_blank')" title="<?= $DatSol->ruta_arte ?>">
+                            <button type="button" style="background:#f7f9f9;" class="btn btn-default light" onclick="window.open('{{ asset ('/archivos/Bpack/Solicitudes/')}}<?= $DatSol->ruta_arte . "?" . date('i:s') ?>','_blank')" title="<?= $DatSol->ruta_arte ?>">
                               <i class="fa fa-file-image-o fa-lg" style="color:#b4c056;"></i>
                             </button>
 
@@ -528,7 +527,7 @@ use App\Models\Bpack\PanelItemEtiquetas;
                           </td>
 
                           <td align="center">
-                            <button type="button" style="background:#f7f9f9;" class="btn btn-default light" onclick="window.open('<?= $server ?>/archivos/Bpack/Solicitudes/<?= $DatSol->ruta_sherpa . "?" . date('i:s') ?>','_blank')" title="<?= $DatSol->ruta_sherpa ?>">
+                            <button type="button" style="background:#f7f9f9;" class="btn btn-default light" onclick="window.open('{{ asset ('/archivos/Bpack/Solicitudes/')}}<?= $DatSol->ruta_sherpa . "?" . date('i:s') ?>','_blank')" title="<?= $DatSol->ruta_sherpa ?>">
                               <i class="fa fa-file-pdf-o fa-lg" style="color:#b90202;"></i>
                             </button>
                             <?php
@@ -791,27 +790,27 @@ use App\Models\Bpack\PanelItemEtiquetas;
   <!-- -------------- Scripts -------------- -->
 
   <!-- -------------- jQuery -------------- -->
-  <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
   <!-- -------------- JvectorMap Plugin -------------- -->
-  <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
   <!-- -------------- HighCharts Plugin -------------- -->
-  <script src="<?= $server ?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
   <!-- -------------- Theme Scripts -------------- -->
-  <script src="<?= $server ?>/panelfiles/assets/js/utility/utility.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/demo/demo.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/main.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/pages/allcp_forms-elements.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/pages/allcp_forms-elements.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
 
   <!-- -------------- Page JS -------------- -->
-  <script src="<?= $server ?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
   <!-- -------------- /Scripts -------------- -->
 </body>

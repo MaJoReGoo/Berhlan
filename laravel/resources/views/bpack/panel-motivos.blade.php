@@ -1,5 +1,5 @@
 <?php
-$server ='/Berhlan/public';
+
 ?>
 
 @foreach($DatosUsuario as $DatLog)
@@ -20,22 +20,22 @@ $server ='/Berhlan/public';
       <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
       <!-- -------------- CSS - theme -------------- -->
-      <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/skin/default_skin/css/theme.css">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
       <!-- -------------- CSS - allcp forms -------------- -->
-      <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/allcp/forms/css/forms.min.css">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
 
       <!-- -------------- Plugins -------------- -->
-      <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
       <!-- -------------- Favicon -------------- -->
-      <link rel="shortcut icon" href="<?=$server?>/panelfiles/assets/img/favicon.ico">
+      <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 
       <!-- Alerts Personalizados -->
 
-       <script src="<?=$server?>/panelfiles/sweetalert/dist/sweetalert.min.js"></script>
+       <script src="{{ asset ('/panelfiles/sweetalert/dist/sweetalert.min.js')}}"></script>
 
-       <link rel="stylesheet" href="<?=$server?>/panelfiles/sweetalert/dist/sweetalert.css">
+       <link rel="stylesheet" href="{{ asset ('/panelfiles/sweetalert/dist/sweetalert.css')}}">
     </head>
 
     <body class="sales-stats-page">
@@ -74,7 +74,7 @@ $server ='/Berhlan/public';
             <div class="topbar-left">
               <ul class="nav nav-list nav-list-topbar pull-left">
                 <li class="active">
-                  <a href="<?=$server?>/panel/menu/3" title="Bcloud">
+                  <a href="{{ asset ('/panel/menu/3')}}" title="Bcloud">
                     <font color="#34495e">
                       Bcloud >
                     </font>
@@ -87,12 +87,12 @@ $server ='/Berhlan/public';
             </div>
 
             <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-              <a href="<?=$server?>/panel/bpack/motivos/agregar" class="btn btn-primary btn-sm ml10" title="Nuevo motivo de rechazo">
+              <a href="{{ asset ('/panel/bpack/motivos/agregar')}}" class="btn btn-primary btn-sm ml10" title="Nuevo motivo de rechazo">
                 <span class="fa fa-plus pr5"></span>
                 <span class="fa fa-navicon pr5"></span>
               </a>
 
-              <a href="<?=$server?>/panel/menu/3" class="btn btn-primary btn-sm ml10" title="Bcloud">
+              <a href="{{ asset ('/panel/menu/3')}}" class="btn btn-primary btn-sm ml10" title="Bcloud">
                 REGRESAR &nbsp;
                 <span class="fa fa-arrow-left"></span>
               </a>
@@ -165,7 +165,7 @@ $server ='/Berhlan/public';
 
                           <!-- Modificar -->
                           <td style="text-align: center">
-                            <button type="button" class="btn btn-default light" onclick="window.location.href='<?=$server?>/panel/bpack/motivos/modificar/<?=$DatMov->id_motivo?>'">
+                            <button type="button" class="btn btn-default light" onclick="window.location.href='{{ asset ('/panel/bpack/motivos/modificar/')}}<?=$DatMov->id_motivo?>'">
                               <i class="fa fa-pencil fa-lg" style="color:#AEBF25;"></i>
                             </button>
                           </td>
@@ -188,27 +188,27 @@ $server ='/Berhlan/public';
       <!-- -------------- Scripts -------------- -->
 
       <!-- -------------- jQuery -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
       <!-- -------------- JvectorMap Plugin -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
       <!-- -------------- HighCharts Plugin -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
       <!-- -------------- Theme Scripts -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/utility/utility.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/demo/demo.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/main.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/pages/dashboard2.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
 
       <!-- -------------- Page JS -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
       <!-- -------------- /Scripts -------------- -->
     </body>

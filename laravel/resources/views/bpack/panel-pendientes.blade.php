@@ -1,5 +1,4 @@
 <?php
-$server = '/Berhlan/public';
 
 use App\Models\Bpack\PanelMuestras;
 ?>
@@ -24,20 +23,20 @@ use App\Models\Bpack\PanelMuestras;
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
   <!-- -------------- CSS - theme -------------- -->
-  <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/skin/default_skin/css/theme.css">
+  <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
   <!-- -------------- CSS - allcp forms -------------- -->
-  <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.min.css">
-  <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.css">
+  <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
   <!-- -------------- Plugins -------------- -->
-  <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
   <!-- -------------- Favicon -------------- -->
-  <link rel="shortcut icon" href="<?= $server ?>/panelfiles/assets/img/favicon.ico">
+  <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 
   <!-- Editor -->
-  <script type="text/javascript" src="<?= $server ?>/panelfiles/ckeditor/ckeditor.js"></script>
+  <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
 </head>
 
 <body>
@@ -75,7 +74,7 @@ use App\Models\Bpack\PanelMuestras;
         <div class="topbar-left">
           <ul class="nav nav-list nav-list-topbar pull-left">
             <li class="active">
-              <a href="<?= $server ?>/panel/menu/3" title="Bcloud">
+              <a href="{{ asset ('/panel/menu/3')}}" title="Bcloud">
                 <font color="#34495e">
                   Bcloud >
                 </font>
@@ -88,7 +87,7 @@ use App\Models\Bpack\PanelMuestras;
         </div>
 
         <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-          <a href="<?= $server ?>/panel/menu/3" class="btn btn-primary btn-sm ml10" title="Bcloud">
+          <a href="{{ asset ('/panel/menu/3')}}" class="btn btn-primary btn-sm ml10" title="Bcloud">
             REGRESAR &nbsp;
             <span class="fa fa-arrow-left"></span>
           </a>
@@ -142,7 +141,7 @@ use App\Models\Bpack\PanelMuestras;
 
         <!-- 1 -->
         <div class="col-sm-3 col-xl-4">
-          <a href="<?= $server ?>/panel/bpack/penruta" title="Pendientes de ruta">
+          <a href="{{ asset ('/panel/bpack/penruta')}}" title="Pendientes de ruta">
             <div class="col-xs-12 ph10 text-center  panel panel-body">
               <i class="fa fa-exclamation fa-3x" style="color:#FEDA00; text-shadow: 1px -1px 1px #000;"> <?= $ruta ?></i>
               <h6 class="text-muted" style="padding-top: 20px">
@@ -156,7 +155,7 @@ use App\Models\Bpack\PanelMuestras;
         </div>
         <!-- 2 -->
         <div class="col-sm-3 col-xl-4">
-          <a href="<?= $server ?>/panel/bpack/penaprueba" title="Pendientes de aprobación solicitud">
+          <a href="{{ asset ('/panel/bpack/penaprueba')}}" title="Pendientes de aprobación solicitud">
             <div class="col-xs-12 ph10 text-center  panel panel-body">
               <i class="fa fa-exclamation-circle fa-3x" style="color:#6CBCED; text-shadow: 1px -1px 1px #000;"> <?= $aprobasol ?></i>
               <h6 class="text-muted" style="padding-top: 20px">
@@ -170,7 +169,7 @@ use App\Models\Bpack\PanelMuestras;
         </div>
         <!-- 3 -->
         <div class="col-sm-3 col-xl-4">
-          <a href="<?= $server ?>/panel/bpack/pensherpa" title="Pendientes de aprobación sherpas digitales (pdf)">
+          <a href="{{ asset ('/panel/bpack/pensherpa')}}" title="Pendientes de aprobación sherpas digitales (pdf)">
             <div class="col-xs-12 ph10 text-center  panel panel-body">
               <i class="fa fa-exclamation-triangle fa-3x" style="color:#A8CB2A; text-shadow: 1px -1px 1px #000;"> <?= $aprobasherpa ?></i>
               <h6 class="text-muted" style="padding-top: 20px">
@@ -187,7 +186,7 @@ use App\Models\Bpack\PanelMuestras;
       <div class="row">
         <!-- 4 -->
         <div class="col-sm-3 col-xl-4">
-          <a href="<?= $server ?>/panel/bpack/pencontrato" title="Pendientes de prueba contrato física">
+          <a href="{{ asset ('/panel/bpack/pencontrato')}}" title="Pendientes de prueba contrato física">
             <div class="col-xs-12 ph10 text-center  panel panel-body">
               <i class="fa fa-exclamation-circle fa-3x" style="color:#6CBCED; text-shadow: 1px -1px 1px #000;"> <?= $prueba ?></i>
               <h6 class="text-muted" style="padding-top: 20px">
@@ -202,7 +201,7 @@ use App\Models\Bpack\PanelMuestras;
 
         <!-- 5 -->
         <div class="col-sm-3 col-xl-4">
-          <a href="<?= $server ?>/panel/bpack/penaprcontrato" title="Pendientes de aprobación prueba contrato física">
+          <a href="{{ asset ('/panel/bpack/penaprcontrato')}}" title="Pendientes de aprobación prueba contrato física">
             <div class="col-xs-12 ph10 text-center  panel panel-body">
               <i class="fa fa-exclamation-triangle fa-3x" style="color:#A8CB2A; text-shadow: 1px -1px 1px #000;"> <?= $aprobaprueba ?></i>
               <h6 class="text-muted" style="padding-top: 20px">
@@ -217,7 +216,7 @@ use App\Models\Bpack\PanelMuestras;
 
         <!-- 6 -->
         <div class="col-sm-3 col-xl-4">
-          <a href="<?= $server ?>/panel/bpack/correcaprueba/0" title="Pendientes de corrección solicitud por rechazo en ruta">
+          <a href="{{ asset ('/panel/bpack/correcaprueba/0')}}" title="Pendientes de corrección solicitud por rechazo en ruta">
             <div class="col-xs-12 ph10 text-center  panel panel-body">
               <i class="fa fa-exclamation-triangle fa-3x" style="color:#A8CB2A; text-shadow: 1px -1px 1px #000;"> <?= $correccion ?></i>
               <h6 class="text-muted" style="padding-top: 20px">
@@ -247,7 +246,7 @@ use App\Models\Bpack\PanelMuestras;
       <div class="row">
         <!-- 7 -->
         <div class="col-sm-3 col-xl-4">
-          <a href="<?= $server ?>/panel/bpack/muestras/pendientes/0" title="Pendientes de impresión muestras físicas">
+          <a href="{{ asset ('/panel/bpack/muestras/pendientes/0')}}" title="Pendientes de impresión muestras físicas">
             <div class="col-xs-12 ph10 text-center  panel panel-body">
               <i class="fa fa-exclamation-circle fa-3x" style="color:#6CBCED; text-shadow: 1px -1px 1px #000;"> <?= $cantsolmf ?></i>
               <h6 class="text-muted" style="padding-top: 20px">
@@ -282,27 +281,27 @@ use App\Models\Bpack\PanelMuestras;
   <!-- -------------- Scripts -------------- -->
 
   <!-- -------------- jQuery -------------- -->
-  <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.j')}}'"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
   <!-- -------------- JvectorMap Plugin -------------- -->
-  <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
   <!-- -------------- HighCharts Plugin -------------- -->
-  <script src="<?= $server ?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
   <!-- -------------- Theme Scripts -------------- -->
-  <script src="<?= $server ?>/panelfiles/assets/js/utility/utility.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/demo/demo.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/main.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/pages/allcp_forms-elements.js"></script>
-  <script src="<?= $server ?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/pages/allcp_forms-elements.js')}}"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
 
   <!-- -------------- Page JS -------------- -->
-  <script src="<?= $server ?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+  <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
   <!-- -------------- /Scripts -------------- -->
 </body>
