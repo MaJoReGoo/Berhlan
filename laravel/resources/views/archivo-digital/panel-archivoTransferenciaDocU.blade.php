@@ -30,7 +30,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
             rel='stylesheet' type='text/css'>
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/skin/default_skin/css/theme.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
         {{-- Importar styles y funcionamiento del Select2 --}}
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -39,29 +39,29 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
 
-        <script type="text/javascript" src="<?= $server ?>/panelfiles/select2/dist/js/select2.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/select2/dist/css/select2.min.css">
+        <script type="text/javascript" src="{{ asset ('/panelfiles/select2/dist/js/select2.min.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/select2/dist/css/select2.min.css')}}">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.min.css">
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<?= $server ?>/panelfiles/assets/img/favicon.ico">
+        <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
         <!-- -------------- DataTables -------------- -->
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap4.min.css">
         <!-- Editor -->
-        <script type="text/javascript" src="<?= $server ?>/panelfiles/ckeditor/ckeditor.js"></script>
+        <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
         <!-- SweetAlert2 -->
 
-        <script src="<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.min.js"></script>
-        <link rel="stylesheet" href="<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.css">
+        <script src="{{ asset ('/panelfiles/sweetalert/dist/sweetalert.min.js')}}"></script>
+        <link rel="stylesheet" href="{{ asset ('/panelfiles/sweetalert/dist/sweetalert.css')}}">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
@@ -69,63 +69,8 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
         <script src="https://cdnjs.com/libraries/pdf.js"></script>
         <script src="https://unpkg.com/pdfjs-dist/"></script>
 
-        <style>
-            .remove-btn {
-                background: #f3d6d6;
-                border: 1px solid red;
-                display: flex;
-                align-items: end;
-                border-radius: 5px;
-            }
+        <link rel="stylesheet" type="text/css" href="{{ asset('/public/css/archivo-digital/panel-archivoTransferenciaDocU.blade.css') }}">
 
-            .card-spacing {
-                padding: 30px;
-
-            }
-
-            .titulo {
-                width: 98%;
-                background-color: #003f6d;
-                padding: 0 10px;
-                text-transform: uppercase;
-                margin-top: 10px;
-                margin-left: 10px;
-                margin-bottom: 10px;
-                padding-right: 15px;
-            }
-
-            .title-background {
-                background: #1e5799;
-                /* Old browsers */
-                background: -moz-linear-gradient(45deg,
-                        #003f6d 0%,
-                        #003f6d 50%,
-                        #003f6d 51%,
-                        #ffffff 52%);
-                /* FF3.6-15 */
-                background: -webkit-linear-gradient(45deg,
-                        #003f6d 0%,
-                        #003f6d 50%,
-                        #003f6d 51%,
-                        #ffffff 52%);
-                /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(45deg,
-                        #003f6d 0%,
-                        #003f6d 50%,
-                        #003f6d 51%,
-                        #ffffff 52%);
-                /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1);
-                /* IE6-9 fallback on horizontal gradient */
-                border-bottom-color: #003f6d;
-                border-bottom-style: solid;
-                color: #ffffff;
-            }
-
-            .rqs {
-                margin-bottom: 20px;
-            }
-        </style>
         @include('archivo-digital.modales.modal-transferenciaDocumentalU')
     </head>
 
@@ -165,7 +110,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/menu/108" title="Inicio">
+                                <a href="{{ asset ('/panel/menu/108')}}" title="Inicio">
                                     <font color="#34495e">
                                         Archivo digital >
                                     </font>
@@ -179,7 +124,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/menu/108" class="btn btn-primary btn-sm ml10" title="Inicio">
+                        <a href="{{ asset ('/panel/menu/108')}}" class="btn btn-primary btn-sm ml10" title="Inicio">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
                         </a>
@@ -202,7 +147,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
                                     <div class="card-body rqs shadow bg-body rounded" style="float: right">
                                         <button id="btn_adjuntar" type="button" class="btn btn-primary mb-2"
                                             data-toggle="modal" data-target="#agregarTransferencia">
-                                            <img src="{{ $server }}/images/add-task.png">
+                                            <img src="{{ asset ('/images/add-task.png')}}">
                                             Realizar Tranferncia
                                             </img>
                                         </button>
@@ -288,7 +233,7 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
                                                         <td>
                                                             <button id="btn_adjuntar" type="button" class="btn mb-2"
                                                                 style="background: none"
-                                                                onclick="window.location.href='<?= $server ?>/panel/archivo/transferenciau/recibir/<?= $DatReFu->id_fuid ?>'">
+                                                                onclick="window.location.href='{{ asset ('/panel/archivo/transferenciau/recibir/')}}<?= $DatReFu->id_fuid ?>'">
                                                                 <img src="{{ $server }}/images/info.png"></img>
                                                             </button>
                                                         </td>
@@ -326,27 +271,27 @@ use App\Models\ArchivoDigital\PanelTipoDocumento;
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/utility/utility.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/demo.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/main.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/pages/dashboard2.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
         <!-- -------------- DataTables -------------- -->
         <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>

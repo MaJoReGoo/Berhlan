@@ -1,0 +1,64 @@
+.remove-btn {
+    background: #f3d6d6;
+    border: 1px solid red;
+    display: flex;
+    align-items: end;
+    border-radius: 5px;
+}
+
+.card-spacing {
+    padding: 30px;
+
+}
+.titulo {
+    width: 98%;
+    background-color: #003f6d;
+    padding: 0 10px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-right: 15px;
+}
+
+.title-background {
+    background: #1e5799;
+
+/* Old browsers */
+
+    background: -moz-linear-gradient(45deg,
+    #003f6d 0%,
+    #003f6d 50%,
+    #003f6d 51%,
+    #ffffff 52%);
+    
+/* FF3.6-15 */
+
+    background: -webkit-linear-gradient(45deg,
+    #003f6d 0%,
+    #003f6d 50%,
+    #003f6d 51%,
+    #ffffff 52%);
+
+/* Chrome10-25,Safari5.1-6 */
+
+    background: linear-gradient(45deg,
+    #003f6d 0%,
+    #003f6d 50%,
+    #003f6d 51%,
+    #ffffff 52%);
+
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1);
+
+/* IE6-9 fallback on horizontal gradient */
+
+    border-bottom-color: #003f6d;
+    border-bottom-style: solid;
+    color: #ffffff;
+}
+.rqs {
+    margin-bottom: 20px;
+}
+      
