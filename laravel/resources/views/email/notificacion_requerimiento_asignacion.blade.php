@@ -1,25 +1,9 @@
 @extends('email.layouts.app')
 @section('content')
-<style>
-    .my-button {
-        padding: 10px 20px;
-        background-color: #ffc400;
-        color: #253061;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
 
-    .my-button:hover {
-        background-color: #c39a12;
-        color: #253061;
-    }
+<link rel="stylesheet" type="text/css" href="{{ asset ('/public/css/email/notificacion_requerimiento_asignacion.blade.css')}}">
 
-    .my-button:active {
-        background-color: #efc538;
-        color: #253061;
-    }
-</style>
+
 <table align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: #F5F7FA" width="100%">
     <tr>
         <td valign="top" width="100%">
