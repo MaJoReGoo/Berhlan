@@ -1,5 +1,5 @@
 <?php
-$server = '/Berhlan/public';
+
 $server_api= env('APP_URL_API');
 ?>
 
@@ -24,32 +24,32 @@ $server_api= env('APP_URL_API');
             rel='stylesheet' type='text/css'>
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/skin/default_skin/css/theme.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.min.css">
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<?= $server ?>/panelfiles/assets/img/favicon.ico">
+        <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico">
 
         <!-- Editor -->
-        <script type="text/javascript" src="<?= $server ?>/panelfiles/ckeditor/ckeditor.js"></script>
+        <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script>
             function submitForm() {
                 var formData = new FormData(document.getElementById('myForm'));
 
-                axios.put('<?=$server_api?>api1/api/cargararchivo', formData)
+                axios.put('{{ asset_api('api1/api/cargararchivo')}}, formData)
                     .then(response => {
                         // Handle the response
                         console.log(response.data.body);
                         $.ajax({
                             type: 'GET',
-                            url: '<?= $server ?>/panel/despachos/cargardespacho/' + response.data
+                            url: '{{ asset ('/panel/despachos/cargardespacho/')}} + response.data
                                 .body,
                             success: function(response) {
                                 /*alert(response);
@@ -73,13 +73,13 @@ $server_api= env('APP_URL_API');
             function submitFile(id, archivo) {
 
 
-                axios.put('<?=$server_api?>api2/api/hacerdispatch/' + archivo)
+                axios.put('{{ asset_api('api2/api/hacerdispatch/')}} + archivo)
                     .then(response => {
                         // Handle the response
                         console.log(response.data.body);
                         $.ajax({
                             type: 'GET',
-                            url: '<?= $server ?>/panel/despachos/editardespacho/' + id,
+                            url: '{{ asset ('/panel/despachos/editardespacho/')}} + id,
                             success: function(response) {
 
                                 console.log(response)
@@ -134,7 +134,7 @@ $server_api= env('APP_URL_API');
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/noticias/noticias" title="Inicio">
+                                <a href="{{ asset ('/panel/noticias/noticias')}}" title="Inicio">
                                     <font color="#34495e">
                                         Cambio de contraseña
                                     </font>
@@ -144,7 +144,7 @@ $server_api= env('APP_URL_API');
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/noticias/noticias" class="btn btn-primary btn-sm ml10"
+                        <a href="{{ asset ('/panel/noticias/noticias')}}" class="btn btn-primary btn-sm ml10"
                             title="Inicio">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
@@ -187,7 +187,7 @@ $server_api= env('APP_URL_API');
 
 
                                                             <a class="btn btn-primary"
-                                                                href="<?= $server ?>/panel/despachos/enviardespachos"
+                                                                href="{{ asset ('/panel/despachos/enviardespachos')}}"
                                                                 type="button">Enviar Todos</a>
 
                                                         </div>
@@ -297,27 +297,27 @@ $server_api= env('APP_URL_API');
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/utility/utility.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/demo.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/main.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/pages/dashboard2.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
         <!-- -------------- /Scripts -------------- -->
     </body>
