@@ -61,7 +61,7 @@ use App\Models\Parametrizacion\PanelCentrosOp;
 <ul class="nav sidebar-menu">
     <!-- Logout -->
     <li>
-        <a href="<?= $server ?>/panel/logout" style="cursor: pointer">
+        <a href="{{ asset ('/panel/logout')}}" style="cursor: pointer">
             <span class="fa fa-sign-out fa-2x" style="color: #CADB47;"></span>
             <span class="sidebar-title">
                 <font style="color: #CADB47;">

@@ -5,7 +5,7 @@ use App\Models\Parametrizacion\PanelCargos;
 use App\Models\Parametrizacion\PanelAreas;
 use App\Models\Parametrizacion\PanelEmpresas;
 use App\Models\Parametrizacion\PanelCentrosOp;
-
+$server = '/Berhlan/public';
 ?>
 
 <style>
@@ -92,9 +92,9 @@ use App\Models\Parametrizacion\PanelCentrosOp;
 <div style="display: flex">
     <div>
         <div class="navbar-logo-wrapper bg-dark">
-            <a class="navbar-logo-text" href="{{ asset ('/panel/noticias/noticias')}}"
-                onclick="localStorage.setItem('menu', '{{ asset ('/panel/noticias/noticias')}}">
-                <img src="{{ asset ('/panelfiles/assets/img/logo1_wh.png')}}" style="height: 40px">
+            <a class="navbar-logo-text" href="<?= $server ?>/panel/noticias/noticias"
+                onclick="localStorage.setItem('menu', '<?= $server ?>/panel/noticias/noticias')">
+                <img src="<?= $server ?>/panelfiles/assets/img/logo1_wh.png" style="height: 40px">
             </a>
             <span id="sidebar_left_toggle" class="ad ad-lines"></span>
         </div>
@@ -142,7 +142,7 @@ use App\Models\Parametrizacion\PanelCentrosOp;
 
     <div class="dropdown" style="margin-right: 20px;">
         <button class="dropbtn">
-            <img style="width: 33px" src="{{ asset ('/panelfiles/iconos/usuario.png')}}">
+            <img style="width: 33px" src="<?= $server ?>/panelfiles/iconos/usuario.png">
         </button>
         <div class="dropdown-content">
             <a href="" data-toggle="modal" data-target="#actualizarModal"> <i
@@ -150,7 +150,7 @@ use App\Models\Parametrizacion\PanelCentrosOp;
             {{-- <a href="<?= $server ?>/panel/cambiopwd">Cambiar mi contraseña</a> --}}
         </div>
     </div>
-    <a href="{{ asset ('/panel/logout')}}" class="salir" title="Salir">
+    <a href="<?= $server ?>/panel/logout" class="salir" title="Salir">
         {{-- <i class="fa-regular fa-arrow-right-from-bracket fa-lg" style="color: #CADB47;" ></i> --}}
         <i class="fa-solid fa-power-off fa-lg" style="color: #CADB47;"></i>
     </a>
