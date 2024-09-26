@@ -1,0 +1,47 @@
+.table-fixed thead,
+.table-fixed tfoot
+         {
+          width: 100%;
+         }
+
+        .table-fixed thead,
+        .table-fixed tbody,
+        .table-fixed tfoot,
+        .table-fixed tr,
+        .table-fixed td,
+        .table-fixed th
+         {
+          display: flex;
+          flex: 100%;
+         }
+
+        .table-fixed tbody td,
+        .table-fixed thead > tr> th,
+        .table-fixed tfoot > tr> td
+         {
+          border-bottom-width: 0;
+         }
+
+        .table-fixed tbody tr, .table-fixed tbody td, .table-fixed th
+         {
+          width: 100%;
+         }
+
+        .table-fixed tbody
+         {
+          height: auto;
+          overflow: auto;
+          width: 100%;
+          flex-flow: row wrap;
+          max-height: 70vh;
+         }
+
+        .table-responsive
+         {
+          overflow: auto;
+         }
+
+        .table-fixed tbody td, .table-fixed th
+         {
+          width: 112px;
+         }
