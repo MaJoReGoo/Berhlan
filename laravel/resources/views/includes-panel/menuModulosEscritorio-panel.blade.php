@@ -6,11 +6,8 @@ use App\Models\Parametrizacion\PanelAreas;
 use App\Models\Parametrizacion\PanelCentrosOp;
 ?>
 
-<style>
-    .sidebar-menu>li>a:hover {
-        color: #67d3e0;
-    }
-</style>
+<link rel="stylesheet" type="text/css"
+    href="{{ asset('/public/css/includes-panel/modales/menuModulosEscritorio-panel.blade.css') }}">
 
 <header class="sidebar-header">
     <!-- -------------- Sidebar - Author -------------- -->

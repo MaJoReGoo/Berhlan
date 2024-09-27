@@ -1,6 +1,6 @@
 <div class="navbar-logo-wrapper">
-      <a class="navbar-logo-text" href="<?=$server?>/panel/escritorio">
-          <img src="<?=$server?>/panelfiles/assets/img/logo1_wh.png" style="height: 40px">
+      <a class="navbar-logo-text" href="{{ asset ('/panel/escritorio')}}">
+          <img src="{{ asset ('/panelfiles/assets/img/logo1_wh.png')}}" style="height: 40px">
       </a>
       <span id="sidebar_left_toggle" class="ad ad-lines"></span>
 </div>

@@ -6,10 +6,10 @@
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 <!-- -------------- CSS - theme -------------- -->
-<link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/skin/default_skin/css/theme.css">
+<link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
 <!-- -------------- CSS - allcp forms -------------- -->
-<link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/allcp/forms/css/forms.css">
+<link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
 <!-- -------------- Favicon -------------- -->
-<link rel="shortcut icon" href="<?=$server?>/panelfiles/assets/img/favicon.png">
+<link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.png')}}">
