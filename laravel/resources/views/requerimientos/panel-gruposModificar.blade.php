@@ -1,5 +1,4 @@
 <?php
-$server ='/Berhlan/public';
 
 use App\Models\Requerimientos\PanelGrupos;
 use App\Models\Parametrizacion\PanelCargos;
@@ -29,20 +28,20 @@ use App\Models\Parametrizacion\PanelCentrosOp;
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/skin/default_skin/css/theme.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/allcp/forms/css/forms.min.css">
-        <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/allcp/forms/css/forms.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<?=$server?>/panelfiles/assets/img/favicon.ico">
+        <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 
         <!-- Editor -->
-        <script type="text/javascript" src="<?=$server?>/panelfiles/ckeditor/ckeditor.js"></script>
+        <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
       </head>
 
       <body>
@@ -81,7 +80,7 @@ use App\Models\Parametrizacion\PanelCentrosOp;
               <div class="topbar-left">
                 <ul class="nav nav-list nav-list-topbar pull-left">
                   <li class="active">
-                    <a href="<?=$server?>/panel/requerimientos/grupos" title="Requerimientos > Grupos">
+                    <a href="{{ asset ('/panel/requerimientos/grupos')}}" title="Requerimientos > Grupos">
                       <font color="#34495e">
                         Requerimientos > Grupos >
                       </font>
@@ -94,7 +93,7 @@ use App\Models\Parametrizacion\PanelCentrosOp;
               </div>
 
               <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                <a href="<?=$server?>/panel/requerimientos/grupos" class="btn btn-primary btn-sm ml10" title="Requerimientos > Grupos">
+                <a href="{{ asset ('/panel/requerimientos/grupos')}}" class="btn btn-primary btn-sm ml10" title="Requerimientos > Grupos">
                   REGRESAR &nbsp;
                   <span class="fa fa-arrow-left"></span>
                 </a>
@@ -233,7 +232,7 @@ use App\Models\Parametrizacion\PanelCentrosOp;
                             </th>
 
                             <td align="right">
-                              <button type="button" class="btn btn-default light" onclick="window.location.href='<?=$server?>/panel/requerimientos/empleados/asociar/<?=$DatGru->id_grupo?>'" title="Asociar empleado">
+                              <button type="button" class="btn btn-default light" onclick="window.location.href='{{ asset ('/panel/requerimientos/empleados/asociar/')}}<?=$DatGru->id_grupo?>'" title="Asociar empleado">
                                 <span class="fa fa-plus pr5" style="color:#AEBF25;"></span>
                                 <span class="fa fa-user pr5" style="color:#AEBF25;"></span>
                               </button>
@@ -398,27 +397,27 @@ use App\Models\Parametrizacion\PanelCentrosOp;
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        <script src="<?=$server?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-        <script src="<?=$server?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<?=$server?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-        <script src="<?=$server?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<?=$server?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-        <script src="<?=$server?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-        <script src="<?=$server?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<?=$server?>/panelfiles/assets/js/utility/utility.js"></script>
-        <script src="<?=$server?>/panelfiles/assets/js/demo/demo.js"></script>
-        <script src="<?=$server?>/panelfiles/assets/js/main.js"></script>
-        <script src="<?=$server?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
-        <script src="<?=$server?>/panelfiles/assets/js/pages/dashboard2.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<?=$server?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
         <!-- -------------- /Scripts -------------- -->
       </body>

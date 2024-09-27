@@ -1,5 +1,5 @@
 <?php
-$server = '/Berhlan/public';
+
 ?>
 
 @foreach ($DatosUsuario as $DatLog)
@@ -54,7 +54,7 @@ $server = '/Berhlan/public';
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/menu/4" title="Requisición de personal">
+                                <a href="{{ asset('/panel/menu/4') }}" title="Requisición de personal">
                                     <font color="#34495e">
                                         Requerimientos >
                                     </font>
@@ -67,7 +67,7 @@ $server = '/Berhlan/public';
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/menu/118" class="btn btn-primary btn-sm ml10"
+                        <a href="{{ asset('/panel/menu/118') }}" class="btn btn-primary btn-sm ml10"
                             title="Inconformidades">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
@@ -150,7 +150,4 @@ $server = '/Berhlan/public';
         <script type="module" src="{{ asset('/js/requerimientos/panel-elementos_requisiciones.js') }}"></script>
 
     </body>
-
 @endforeach
-
-

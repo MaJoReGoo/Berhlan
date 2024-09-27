@@ -1,0 +1,54 @@
+.my-button {
+      padding: 10px 20px;
+      background-color: #ffc400;
+      color: #003070;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .my-button:hover {
+      background-color: #c19912;
+      color: #003070;
+    }
+
+    .my-button:active {
+      background-color: #ffc400;
+      color: #003070;
+    }
+    
+.my-button-env {
+      padding: 10px 20px;
+      background-color: #00763b;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .my-button-env-dsb {
+      padding: 10px 20px;
+      background-color: #999999;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .my-button-envR {
+      padding: 10px 20px;
+      background-color: #d9480f;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .my-button-envR-dsb {
+      padding: 10px 20px;
+      background-color: #999999;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }

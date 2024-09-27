@@ -1,5 +1,4 @@
 <?php
-$server = '/Berhlan/public';
 
 use App\Models\Parametrizacion\PanelCentrosOp;
 use App\Models\Parametrizacion\PanelCargos;
@@ -27,94 +26,9 @@ use App\Models\Requerimientos\PanelCategorias;
         </title>
 
         @include('includes-CDN/include-head')
-        {{-- <meta name="keywords" content="panel, cms, usuarios, servicio" />
-        <meta name="description" content="Intranet para grupo Berhlan">
-        <meta name="author" content="USUARIO">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- -------------- Fonts -------------- -->
-        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
-        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic'
-            rel='stylesheet' type='text/css'>
-
-        <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/skin/default_skin/css/theme.css">
-
-        <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.min.css">
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.css">
-
-        <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
-
-        <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<?= $server ?>/panelfiles/assets/img/favicon.ico">
-
-        <!-- Editor -->
-        <script type="text/javascript" src="<?= $server ?>/panelfiles/ckeditor/ckeditor.js"></script> --}}
-
-        <style>
-            .my-button {
-                padding: 10px 20px;
-                background-color: #22b8cf;
-                color: #ffffff;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            .my-button:hover {
-                background-color: #1a8a9b;
-                color: #ffffff;
-            }
-
-            .my-button:active {
-                background-color: #22b8cf;
-                color: #003070;
-            }
-
-            /* Botón 2 */
-            .my-button-2 {
-                padding: 10px 20px;
-                background-color: #ffc400;
-                color: #003070;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            .my-button-2:hover {
-                background-color: #c19912;
-                color: #003070;
-            }
-
-            .my-button-2:active {
-                background-color: #ffc400;
-                color: #003070;
-            }
-
-            .select2-container .select2-selection--single {
-                height: 40px;
-                /* Cambia la altura según lo necesites */
-            }
-
-            .select2-container--default .select2-selection--single .select2-selection__arrow {
-                top: 6px;
-            }
-
-            /* Botón 2 */
-        </style>
-
-        {{-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script-->
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <link rel="stylesheet" href="<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.css">
-
-        <!-- Sweetalert -->
-        <script src="https://<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.min.js"></script>
-        <link rel="stylesheet" href="https://<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.css">  --}}
+        <link rel="stylesheet" type="text/css"
+            href="{{ asset('/public/css/requerimientos/panel-atenderProcesar.blade-220324.css') }}">
 
         <script language="JavaScript">
             //<!--
@@ -163,25 +77,6 @@ use App\Models\Requerimientos\PanelCategorias;
             //-->
         </script>
 
-        <style>
-            .my-button-env {
-                padding: 10px 20px;
-                background-color: #22b8cf;
-                color: #ffffff;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            .my-button-env-dsb {
-                padding: 10px 20px;
-                background-color: #999999;
-                color: #ffffff;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-        </style>
         {{-- <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
     </head>
@@ -224,7 +119,7 @@ use App\Models\Requerimientos\PanelCategorias;
                                 <?php
                                 $nomgrupo = PanelGrupos::getGrupo($DatosSolicitud[0]->grupo);
                                 ?>
-                                <a href="<?= $server ?>/panel/requerimientos/atender/listado/<?= $nomgrupo[0]->id_grupo ?>"
+                                <a href="{{ asset ('/panel/requerimientos/atender/listado/')}}<?= $nomgrupo[0]->id_grupo ?>"
                                     title="Requerimientos > Grupo <?= $nomgrupo[0]->descripcion ?> > Atender">
                                     <font color="#34495e">
                                         Requerimientos > Grupo <?= $nomgrupo[0]->descripcion ?> > Atender >
@@ -238,7 +133,7 @@ use App\Models\Requerimientos\PanelCategorias;
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/requerimientos/atender/listado/<?= $nomgrupo[0]->id_grupo ?>"
+                        <a href="{{ asset ('/panel/requerimientos/atender/listado/')}}<?= $nomgrupo[0]->id_grupo ?>"
                             class="btn btn-primary btn-sm ml10" id="regresar"
                             title="Requerimientos > Grupo <?= $nomgrupo[0]->descripcion ?> > Atender">
                             REGRESAR
@@ -410,7 +305,7 @@ use App\Models\Requerimientos\PanelCategorias;
 
                                                             <button type="button" style="background:#f7f9f9;"
                                                                 class="btn btn-default light"
-                                                                onclick="window.open('<?= $server ?>/archivos/Requerimientos/<?= $DatosSolicitud[0]->archivo . '?' . date('i:s') ?>','_blank')"
+                                                                onclick="window.open('{{ asset ('/archivos/Requerimientos/<?= $DatosSolicitud[0]->archivo . '?' . date('i:s') ?>','_blank')"
                                                                 title="Descargar">
                                                                 <i class="fa <?= $icono ?> fa-lg"
                                                                     style="color:#<?= $fonicono ?>;"></i>
@@ -530,7 +425,7 @@ use App\Models\Requerimientos\PanelCategorias;
 
                                                             <button type="button" style="background:##e5eaee;"
                                                                 class="btn btn-default light"
-                                                                onclick="window.open('<?= $server ?>/archivos/Requerimientos/<?= $nombrearc . '?' . date('i:s') ?>','_blank')"
+                                                                onclick="window.open('{{ asset ('/archivos/Requerimientos/<?= $nombrearc . '?' . date('i:s') ?>','_blank')"
                                                                 title="Descargar">
                                                                 <i class="fa <?= $icono ?> fa-lg"
                                                                     style="color:#<?= $fonicono ?>;"></i>
@@ -910,7 +805,8 @@ use App\Models\Requerimientos\PanelCategorias;
                                                     <br>
                                                     <div class="col-md-3 form-group">
                                                         <label class="field prepend-icon append-button file">
-                                                            <span class="button btn btn-primary" style="cursor: pointer">
+                                                            <span class="button btn btn-primary"
+                                                                style="cursor: pointer">
                                                                 Adjuntar
                                                             </span>
                                                             <input type="file" name="archivo" id="archivo2"
@@ -926,7 +822,10 @@ use App\Models\Requerimientos\PanelCategorias;
                                                     <div class="col-md-2 form-group" style="display: flex;">
                                                         <br />
                                                         {!! Form::hidden('correoNotificacion', $DatosSolicitud[0]->email_notificacion) !!}
-                                                        {!! Form::submit('Enviar Notificación', ['class' => 'button', 'style' => 'background-color: #00763b; color:white;']) !!}
+                                                        {!! Form::submit('Enviar Notificación', [
+                                                            'class' => 'button',
+                                                            'style' => 'background-color: #00763b; color:white;',
+                                                        ]) !!}
                                                     </div>
                                                     <?php
                                                     //$builder = new \AshAllenDesign\ShortURL\Classes\Builder();
@@ -1291,7 +1190,7 @@ use App\Models\Requerimientos\PanelCategorias;
                                                                 <?php } else { ?>
                                                                 <button type="button" style="background:##e5eaee;"
                                                                     class="btn btn-default light"
-                                                                    onclick="window.open('<?= $server ?>/archivos/Requerimientos/<?= $nombrearc . '?' . date('i:s') ?>','_blank')"
+                                                                    onclick="window.open('{{ asset ('/archivos/Requerimientos/<?= $nombrearc . '?' . date('i:s') ?>','_blank')"
                                                                     title="Descargar">
                                                                     <i class="fa <?= $icono ?> fa-lg"
                                                                         style="color:#<?= $fonicono ?>;"></i>
@@ -1368,7 +1267,7 @@ use App\Models\Requerimientos\PanelCategorias;
                         <div class="modal-body">
 
                             <img class="img-responsive" style="margin:0 auto;"
-                                src="http://192.168.1.210<?= $server ?>/archivos/Requerimientos/<?= $nombrearcD ?>"
+                                src="http://192.168.1.210{{ asset ('/archivos/Requerimientos/')}}<?= $nombrearcD ?>"
                                 alt="">
 
                         </div>
@@ -1382,27 +1281,27 @@ use App\Models\Requerimientos\PanelCategorias;
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        {{-- <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+        {{-- <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/utility/utility.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/demo.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/main.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/pages/allcp_forms-elements.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/main.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/pages/allcp_forms-elements.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js"></script>
 
         <!-- -------------- /Scripts -------------- -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> --}}
@@ -1423,7 +1322,7 @@ use App\Models\Requerimientos\PanelCategorias;
                 const server = '<?php echo $server; ?>';
 
                 // Construir la URL completa
-                const urlCompleta = `${server}/panel/requerimientos/atender${rutaAnterior}`;
+                const urlCompleta = `{{ asset ('/panel/requerimientos/atender')}}${rutaAnterior}`;
 
                 // Asignar la URL al atributo href del enlace
                 document.getElementById('regresar').setAttribute('href', urlCompleta);

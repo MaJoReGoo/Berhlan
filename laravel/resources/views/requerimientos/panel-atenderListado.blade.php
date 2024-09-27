@@ -1,5 +1,5 @@
 <?php
-$server = '/Berhlan/public';
+
 $urlCompleta = $_SERVER['REQUEST_URI'];
 
 use App\Models\Requerimientos\PanelGrupos;
@@ -49,28 +49,29 @@ use App\Models\Requerimientos\PanelSolicitudes;
             rel='stylesheet' type='text/css'>
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/skin/default_skin/css/theme.css">
+        <link rel="stylesheet" type="text/css"
+            href="{{ asset('/panelfiles/assets/skin/default_skin/css/theme.css') }}">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/panelfiles/assets/allcp/forms/css/forms.min.css') }}">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/panelfiles/assets/js/plugins/c3charts/c3.min.css') }}">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<?= $server ?>/panelfiles/assets/img/favicon.ico">
+        <link rel="shortcut icon" href="{{ asset('/panelfiles/assets/img/favicon.ico') }}">
 
         <!-- -------------- DataTables -------------- -->
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap4.min.css">
 
-        <script src="<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="{{ asset('/panelfiles/sweetalert/dist/sweetalert.min.js') }}"></script>
 
-        <link rel="stylesheet" href="<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.css">
+        <link rel="stylesheet" href="{{ asset('/panelfiles/sweetalert/dist/sweetalert.css') }}">
 
         <!-- Sweetalert -->
-        <script src="https://<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.min.js"></script>
-        <link rel="stylesheet" href="https://<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.css">
+        <script src="https://{{ asset('/panelfiles/sweetalert/dist/sweetalert.min.js') }}"></script>
+        <link rel="stylesheet" href="https://{{ asset('/panelfiles/sweetalert/dist/sweetalert.css') }}">
 
         <script language="JavaScript">
             //<!--
@@ -96,13 +97,14 @@ use App\Models\Requerimientos\PanelSolicitudes;
             function cambiarGrupo() {
                 var myElement = document.getElementById('grupoSel');
                 var grupo = myElement.value;
-                location = 'https://192.168.1.210<?= $server ?>/panel/requerimientos/atender/listado/' + grupo;
+                location = 'https://192.168.1.210{{ asset('/panel/requerimientos/atender/listado/') }}' + grupo;
             }
 
             function cambiarCategoria() {
                 var myElement = document.getElementById('categoriaSel');
                 var categoria = myElement.value;
-                location = 'https://192.168.1.210<?= $server ?>/panel/requerimientos/atender/listado-categoria/<?= $Grupo ?>/' +
+                location =
+                    'https://192.168.1.210{{ asset('/panel/requerimientos/atender/listado-categoria/') }}<?= $Grupo ?>/' +
                     categoria;
             }
             //-->
@@ -151,7 +153,8 @@ use App\Models\Requerimientos\PanelSolicitudes;
                                 <?php
                                 $nomgrupo = PanelGrupos::getGrupo($Grupo);
                                 ?>
-                                <a href="<?= $server ?>/panel/requerimientos/atender" id="retorno" title="Requerimientos > Atender">
+                                <a href="{{ asset('/panel/requerimientos/atender') }}" id="retorno"
+                                    title="Requerimientos > Atender">
                                     <font color="#34495e">
                                         Requerimientos > Grupo
                                         <?= $nomgrupo[0]->descripcion ?> >
@@ -173,8 +176,9 @@ use App\Models\Requerimientos\PanelSolicitudes;
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/requerimientos/atender/listado/<?= $Grupo ?> " id="requerimientos"
-                            class="btn btn-primary btn-sm ml10" id = "regresar" title="Requerimientos > Atender">
+                        <a href="{{ asset('/panel/requerimientos/atender/listado/') }}<?= $Grupo ?> "
+                            id="requerimientos" class="btn btn-primary btn-sm ml10" id = "regresar"
+                            title="Requerimientos > Atender">
                             Requirimientos &nbsp;
                             <i class="fa fa-cogs" aria-hidden="true"></i>
                         </a>
@@ -269,7 +273,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
                                         <th style="text-align:center;">
                                             Notificados
                                         </th>
-                                        <th style="text-align:center;" >
+                                        <th style="text-align:center;">
                                             Todos
                                         </th>
                                     </tr>
@@ -309,7 +313,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
                                             <?php
                                         if (isset($idus)) { ?>
                                             <a class="reset"
-                                                href="<?= $server ?>/panel/requerimientos/atender/listado-persona/<?= $Grupo ?>/<?= $idus ?>">
+                                                href="{{ asset('/panel/requerimientos/atender/listado-persona/') }}<?= $Grupo ?>/<?= $idus ?>">
                                                 <i class="fa fa-check-square-o fa-xl" style="color:#ff3300;">
                                                     <?= $totalreq - $notificados ?></i>
 
@@ -321,7 +325,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
                                         if (!isset($idus) && !isset($categoria)&& !isset($DatosSolicitudesAbiertas) ) { ?>
 
                                             <a class="reset"
-                                                href="<?= $server ?>/panel/requerimientos/atender/listado/<?= $Grupo ?> ">
+                                                href="{{ asset('/panel/requerimientos/atender/listado/') }}<?= $Grupo ?> ">
                                                 <i class="fa fa-check-square-o fa-xl" style="color:#ff3300;">
                                                     <?= $totalreq - $notificados ?></i>
 
@@ -333,7 +337,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
                                         if (!isset($idus) && !isset($categoria) && isset($DatosSolicitudesAbiertas)) { ?>
 
                                             <a class="reset"
-                                                href="<?= $server ?>/panel/requerimientos/atender/listado/<?= $Grupo ?> ">
+                                                href="{{ asset('/panel/requerimientos/atender/listado/') }}<?= $Grupo ?> ">
                                                 <i class="fa fa-check-square-o fa-xl" style="color:#ff3300;">
                                                     <?= $SoliAbiertas - $notificados ?></i>
 
@@ -345,7 +349,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
                                             <?php
                     if (isset($idus)) { ?>
                                             <a class="reset"
-                                                href="<?= $server ?>/panel/requerimientos/atender/listado-persona-notificado/<?= $Grupo ?>/<?= $idus ?>">
+                                                href="{{ asset('/panel/requerimientos/atender/listado-persona-notificado/') }}<?= $Grupo ?>/<?= $idus ?>">
                                                 <i class="fa fa-check-square-o fa-xl" style="color:#66a80f;">
                                                     <?= $notificados ?></i>
                                             </a>
@@ -353,7 +357,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
 
                     if (isset($categoria)) { ?>
                                             <a class="reset"
-                                                href="<?= $server ?>/panel/requerimientos/atender/listado-categoria-notificado/<?= $Grupo ?>/<?= $categoria ?>">
+                                                href="{{ asset('/panel/requerimientos/atender/listado-categoria-notificado/') }}<?= $Grupo ?>/<?= $categoria ?>">
                                                 <i class="fa fa-check-square-o fa-xl" style="color:#66a80f;">
                                                     <?= $notificados ?></i>
                                             </a>
@@ -361,17 +365,17 @@ use App\Models\Requerimientos\PanelSolicitudes;
 
                     if (!isset($idus) && !isset($categoria) ) { ?>
                                             <a class="reset"
-                                                href="<?= $server ?>/panel/requerimientos/atender/listado-notificado/<?= $Grupo ?>">
+                                                href="{{ asset('/panel/requerimientos/atender/listado-notificado/') }}<?= $Grupo ?>">
                                                 <i class="fa fa-check-square-o fa-xl" style="color:#66a80f;">
                                                     <?= $notificados ?></i>
                                             </a>
                                             <?php } ?>
                                         </th>
-                                        <th style="text-align:center; background-color: #495057; width: 100px;" >
+                                        <th style="text-align:center; background-color: #495057; width: 100px;">
                                             <?php
                     if (isset($idus)) { ?>
                                             <a class="reset"
-                                                href="<?= $server ?>/panel/requerimientos/atender/listado-persona-todos/<?= $Grupo ?>/<?= $idus ?>">
+                                                href="{{ asset('/panel/requerimientos/atender/listado-persona-todos/') }}<?= $Grupo ?>/<?= $idus ?>">
                                                 <i class="fa fa-check-square-o fa-xl" style="color:#66a80f;">
                                                     <?= $totalreq ?></i>
                                             </a>
@@ -379,7 +383,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
 
                     if (isset($categoria)) { ?>
                                             <a class="reset"
-                                                href="<?= $server ?>/panel/requerimientos/atender/listado-categoria-todos/<?= $Grupo ?>/<?= $categoria ?>">
+                                                href="{{ asset('/panel/requerimientos/atender/listado-categoria-todos/') }}<?= $Grupo ?>/<?= $categoria ?>">
                                                 <i class="fa fa-check-square-o fa-xl" style="color:#66a80f;">
                                                     <?= $totalreq ?></i>
                                             </a>
@@ -387,7 +391,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
 
                     if (!isset($idus) && !isset($categoria) && !isset($DatosSolicitudesAbiertas) ) { ?>
                                             <a class="reset"
-                                                href="<?= $server ?>/panel/requerimientos/atender/listado-todos/<?= $Grupo ?>">
+                                                href="{{ asset('/panel/requerimientos/atender/listado-todos/') }}<?= $Grupo ?>">
                                                 <i class="fa fa-check-square-o fa-xl" style="color:#66a80f;">
                                                     <?= $totalreq ?></i>
                                             </a>
@@ -395,7 +399,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
                                             if (!isset($idus) && !isset($categoria) && isset($DatosSolicitudesAbiertas)
                                             ) { ?>
                                             <a class="reset"
-                                                href="<?= $server ?>/panel/requerimientos/atender/listado-todos/<?= $Grupo ?>">
+                                                href="{{ asset('/panel/requerimientos/atender/listado-todos/') }}<?= $Grupo ?>">
                                                 <i class="fa fa-check-square-o fa-xl" style="color:#66a80f;">
                                                     <?= $SoliAbiertas ?></i>
                                             </a>
@@ -719,7 +723,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
                                                                 <td style="text-align: center">
                                                                     <button type="button"
                                                                         class="btn btn-default light posicion"
-                                                                        onClick="window.location.href='<?= $server ?>/panel/requerimientos/atender/procesar/<?= $DatSol->num_solicitud ?>'">
+                                                                        onClick="window.location.href='{{ asset('/panel/requerimientos/atender/procesar/') }}<?= $DatSol->num_solicitud ?>'">
                                                                         <i class="fa fa-info-circle fa-2x"
                                                                             style="color: #39a65d"></i>&nbsp;
                                                                     </button>
@@ -914,7 +918,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
                                                                 <td style="text-align: center">
                                                                     <button type="button"
                                                                         class="btn btn-default light posicion"
-                                                                        onClick="window.location.href='<?= $server ?>/panel/requerimientos/atender/procesar/<?= $DatSol->num_solicitud ?>'">
+                                                                        onClick="window.location.href='{{ asset('/panel/requerimientos/atender/procesar/') }}<?= $DatSol->num_solicitud ?>'">
                                                                         <i class="fa fa-info-circle fa-2x"
                                                                             style="color: #39a65d"></i>&nbsp;
                                                                     </button>
@@ -1117,7 +1121,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
                                                                 <td style="text-align: center">
                                                                     <button type="button"
                                                                         class="btn btn-default light posicion"
-                                                                        onClick="window.location.href='<?= $server ?>/panel/requerimientos/atender/procesar/<?= $DatSol->num_solicitud ?>'">
+                                                                        onClick="window.location.href='{{ asset('/panel/requerimientos/atender/procesar/') }}<?= $DatSol->num_solicitud ?>'">
                                                                         <i class="fa fa-info-circle fa-2x"
                                                                             style="color: #39a65d"></i>&nbsp;
                                                                     </button>
@@ -1320,7 +1324,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
                                                                 <td style="text-align: center">
                                                                     <button type="button"
                                                                         class="btn btn-default light posicion"
-                                                                        onClick="window.location.href='<?= $server ?>/panel/requerimientos/atender/procesar/<?= $DatSol->num_solicitud ?>'">
+                                                                        onClick="window.location.href='{{ asset('/panel/requerimientos/atender/procesar/') }}<?= $DatSol->num_solicitud ?>'">
                                                                         <i class="fa fa-info-circle fa-2x"
                                                                             style="color: #39a65d"></i>&nbsp;
                                                                     </button>
@@ -1524,7 +1528,7 @@ use App\Models\Requerimientos\PanelSolicitudes;
                                                                     <button type="button"
                                                                         class="btn btn-default light posicion"
                                                                         style="display:none;"
-                                                                        onClick="window.location.href='<?= $server ?>/panel/requerimientos/atender/procesar/<?= $DatSol->num_solicitud ?>'">
+                                                                        onClick="window.location.href='{{ asset('/panel/requerimientos/atender/procesar/') }}<?= $DatSol->num_solicitud ?>'">
                                                                         <i class="fa fa-info-circle fa-2x"
                                                                             style="color: #39a65d"></i>&nbsp;
                                                                     </button>
@@ -1553,27 +1557,28 @@ use App\Models\Requerimientos\PanelSolicitudes;
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+        <script src="{{ asset('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js') }}"></script>
+        <script src="{{ asset('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js') }}"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="{{ asset('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js') }}"></script>
+        <script src="{{ asset('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js') }}">
+        </script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+        <script src="{{ asset('/panelfiles/assets/js/plugins/highcharts/highcharts.js') }}"></script>
+        <script src="{{ asset('/panelfiles/assets/js/plugins/c3charts/d3.min.js') }}"></script>
+        <script src="{{ asset('/panelfiles/assets/js/plugins/c3charts/c3.min.js') }}"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/utility/utility.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/demo.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/main.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/pages/allcp_forms-elements.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
+        <script src="{{ asset('/panelfiles/assets/js/utility/utility.js') }}"></script>
+        <script src="{{ asset('/panelfiles/assets/js/demo/demo.js') }}"></script>
+        <script src="{{ asset('/panelfiles/assets/js/main.js') }}"></script>
+        <script src="{{ asset('/panelfiles/assets/js/pages/allcp_forms-elements.js') }}"></script>
+        <script src="{{ asset('/panelfiles/assets/js/demo/widgets_sidebar.js') }}"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+        <script src="{{ asset('/panelfiles/assets/js/demo/charts/highcharts.js') }}"></script>
 
         <!-- -------------- DataTables -------------- -->
         <!--  <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
@@ -1583,7 +1588,9 @@ use App\Models\Requerimientos\PanelSolicitudes;
         <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap4.min.js"></script>
 
         <script type="module">
-            import { datatablesLanguage } from '<?= $server ?>/js/lang/datatables-lang.js';
+            import {
+                datatablesLanguage
+            } from '{{ asset (' / js / lang / datatables - lang.js ';
 
             $(document).ready(function($) {
 
@@ -1703,13 +1710,13 @@ use App\Models\Requerimientos\PanelSolicitudes;
                     localStorage.removeItem("Y");
                 })
 
-                $('#retorno').on('click', function () {
+                $('#retorno').on('click', function() {
                     localStorage.removeItem("page");
                     localStorage.removeItem('X')
                     localStorage.removeItem('Y')
                 });
 
-                $('a').on('click', function () {
+                $('a').on('click', function() {
                     localStorage.removeItem("page");
                     localStorage.removeItem('X')
                     localStorage.removeItem('Y')

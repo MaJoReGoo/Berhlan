@@ -1,5 +1,4 @@
 <?php
-$server = '/Berhlan/public';
 
 use App\Models\Parametrizacion\PanelUsuarios;
 use App\Models\Parametrizacion\PanelEmpleados;
@@ -62,7 +61,7 @@ use App\Models\Requerimientos\PanelGrupos;
                         <div class="topbar-left">
                             <ul class="nav nav-list nav-list-topbar pull-left">
                                 <li class="active">
-                                    <a href="<?= $server ?>/panel/requerimientos/grupos/modificar/<?= $DatGru->id_grupo ?>"
+                                    <a href="{{ asset('/panel/requerimientos/grupos/modificar/') }}<?= $DatGru->id_grupo ?>"
                                         title="Requerimientos > Grupos > Modificar">
                                         <font color="#34495e">
                                             Requerimientos > Grupos - Empleados >
@@ -76,7 +75,7 @@ use App\Models\Requerimientos\PanelGrupos;
                         </div>
 
                         <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                            <a href="<?= $server ?>/panel/requerimientos/grupos/modificar/<?= $DatGru->id_grupo ?>"
+                            <a href="{{ asset('/panel/requerimientos/grupos/modificar/') }}<?= $DatGru->id_grupo ?>"
                                 class="btn btn-primary btn-sm ml10" title="Requerimientos > Grupos > Modificar">
                                 REGRESAR &nbsp;
                                 <span class="fa fa-arrow-left"></span>
