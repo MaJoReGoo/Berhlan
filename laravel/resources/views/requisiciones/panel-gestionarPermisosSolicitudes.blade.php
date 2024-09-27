@@ -1,5 +1,5 @@
 <?php
-$server = '/Berhlan/public';
+
 ?>
 
 @foreach ($DatosUsuario as $DatLog)
@@ -50,7 +50,7 @@ $server = '/Berhlan/public';
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/menu/32" title="Ssl">
+                                <a href="{{ asset('/panel/menu/32') }}" title="Ssl">
                                     <font color="#34495e">
                                         Requisición de personal >
                                     </font>
@@ -64,7 +64,7 @@ $server = '/Berhlan/public';
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
 
-                        <a href="<?= $server ?>/panel/menu/128" class="btn btn-primary btn-sm ml10"
+                        <a href="{{ asset('/panel/menu/128') }}" class="btn btn-primary btn-sm ml10"
                             title="Requisición de personal">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
@@ -189,7 +189,7 @@ $server = '/Berhlan/public';
         <script>
             window.empleadosPermisos = @json($empleadosPermisos);
         </script>
-        <script type="module" src="{{asset('js/requisiciones/panel-gestionarPermisosSolicitudes.js')}}"></script>
+        <script type="module" src="{{ asset('js/requisiciones/panel-gestionarPermisosSolicitudes.js') }}"></script>
 
     </body>
 

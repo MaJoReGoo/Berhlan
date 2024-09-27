@@ -1,5 +1,4 @@
 <?php
-$server = '/Berhlan/public';
 
 use App\Models\Parametrizacion\PanelCentrosOp;
 use App\Models\Parametrizacion\PanelCargos;
@@ -61,7 +60,7 @@ use App\Models\Requisiciones\PanelMotivos;
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/requisiciones/nomina"
+                                <a href="{{ asset ('/panel/requisiciones/nomina')}}"
                                     title="Requisición de personal > Autorización por nómina">
                                     <font color="#34495e">
                                         Requisición de personal > Gestión de solicitudes >
@@ -75,7 +74,7 @@ use App\Models\Requisiciones\PanelMotivos;
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/requisiciones/nomina" class="btn btn-primary btn-sm ml10"
+                        <a href="{{ asset ('/panel/requisiciones/nomina')}}" class="btn btn-primary btn-sm ml10"
                             title="Requisición de personal > Autorización por nómina">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>

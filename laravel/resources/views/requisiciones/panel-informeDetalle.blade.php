@@ -1,5 +1,4 @@
 <?php
-$server = '/Berhlan/public';
 
 use App\Models\Requisiciones\PanelRequisiciones;
 use App\Models\Requisiciones\PanelMotivos;
@@ -56,7 +55,7 @@ use App\Models\Parametrizacion\PanelEmpresas;
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/requisiciones/informe" title="Requisiciones > Informe">
+                                <a href="{{ asset ('/panel/requisiciones/informe')}}" title="Requisiciones > Informe">
                                     <font color="#34495e">
                                         Requisiciones > Informe >
                                     </font>
@@ -69,7 +68,7 @@ use App\Models\Parametrizacion\PanelEmpresas;
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/requisiciones/informe" class="btn btn-primary btn-sm ml10"
+                        <a href="{{ asset ('/panel/requisiciones/informe')}}" class="btn btn-primary btn-sm ml10"
                             title="Requisiciones > Informe">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>

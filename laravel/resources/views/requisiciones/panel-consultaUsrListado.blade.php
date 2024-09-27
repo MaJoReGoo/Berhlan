@@ -1,5 +1,4 @@
 <?php
-$server = '/Berhlan/public';
 
 use App\Models\Parametrizacion\PanelCargos;
 use App\Models\Parametrizacion\PanelAreas;
@@ -56,7 +55,7 @@ use App\Models\Requisiciones\PanelRequisiciones;
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/requisiciones/consultausr"
+                                <a href="{{ asset ('/panel/requisiciones/consultausr')}}"
                                     title="Requisiciones > Consulta solicitudes">
                                     <font color="#34495e">
                                         Requisiciones > Consulta solicitudes >
@@ -70,7 +69,7 @@ use App\Models\Requisiciones\PanelRequisiciones;
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/requisiciones/consultausr" class="btn btn-primary btn-sm ml10"
+                        <a href="{{ asset ('/panel/requisiciones/consultausr')}}" class="btn btn-primary btn-sm ml10"
                             title="Requisiciones > Consulta solicitudes">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
@@ -241,7 +240,7 @@ use App\Models\Requisiciones\PanelRequisiciones;
 
                                                                 <td style="text-align: center">
                                                                     <button type="button" class="btn btn-default light"
-                                                                        onclick="window.location.href='<?= $server ?>/panel/requisiciones/consultausr/masinfo/<?= $DatSol->num_solicitud ?>'"
+                                                                        onclick="window.location.href='{{ asset ('/panel/requisiciones/consultausr/masinfo/')}}<?= $DatSol->num_solicitud ?>'"
                                                                         title="Más información">
                                                                         <i class="fa fa-exclamation-circle fa-lg"
                                                                             style="color:#AEBF25;"></i>

@@ -1,5 +1,4 @@
 <?php
-$server = '/Berhlan/public';
 
 use App\Models\Parametrizacion\PanelCargos;
 use App\Models\Parametrizacion\PanelAreas;
@@ -19,7 +18,7 @@ use App\Models\Requisiciones\PanelRequisiciones;
             Intranet | Requisición de personal | Consulta
         </title>
         @include('includes-CDN/include-head')
-        <link rel="stylesheet" href="{{asset('css/requisiciones/panel-consultaUsr.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/requisiciones/panel-consultaUsr.css') }}">
     </head>
 
     <body>
@@ -57,7 +56,7 @@ use App\Models\Requisiciones\PanelRequisiciones;
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/menu/32" title="Requisiciones">
+                                <a href="{{ asset('/panel/menu/32') }}" title="Requisiciones">
                                     <font color="#34495e">
                                         Requisiciones >
                                     </font>
@@ -70,7 +69,7 @@ use App\Models\Requisiciones\PanelRequisiciones;
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/menu/32" class="btn btn-primary btn-sm ml10"
+                        <a href="{{ asset('/panel/menu/32') }}" class="btn btn-primary btn-sm ml10"
                             title="Requisiciones">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
@@ -324,7 +323,7 @@ use App\Models\Requisiciones\PanelRequisiciones;
         <script type="module">
             import {
                 configureSelect2
-            } from '<?= $server ?>/js/select2funcion.js';
+            } from '{{ asset('/js/select2funcion.js') }}';
             $(document).ready(function() {
                 configureSelect2();
             });
