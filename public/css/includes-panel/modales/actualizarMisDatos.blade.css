@@ -1,0 +1,9 @@
+.allcp-form .gui-input[disabled] {
+        color: black;
+    }
+
+    .field-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }

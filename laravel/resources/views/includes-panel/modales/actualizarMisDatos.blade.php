@@ -7,17 +7,7 @@ use App\Models\Parametrizacion\PanelCentrosOp;
 
 ?>
 
-<style>
-    .allcp-form .gui-input[disabled] {
-        color: black;
-    }
-
-    .field-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-</style>
+<link rel='stylesheet' type='text/css' href='/public/css/includes-panel/modales/actualizarMisDatos.blade.css'>
 
 <div class="modal fade" id="actualizarModal" tabindex="-1" aria-labelledby="actualizarModal" aria-hidden="true"
     style="height: 100vh;">
