@@ -1,5 +1,5 @@
 <?php
-$server = '/Berhlan/public';
+
 ?>
 
 @foreach ($DatosUsuario as $DatLog)
@@ -23,7 +23,7 @@ $server = '/Berhlan/public';
             rel='stylesheet' type='text/css'>
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/skin/default_skin/css/theme.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
         {{-- Importar styles y funcionamiento del Select2 --}}
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -31,47 +31,23 @@ $server = '/Berhlan/public';
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
-        <script type="text/javascript" src="<?= $server ?>/panelfiles/select2/dist/js/select2.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/select2/dist/css/select2.min.css">
+        <script type="text/javascript" src="{{ asset ('/panelfiles/select2/dist/js/select2.min.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/select2/dist/css/select2.min.css')}}">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.min.css">
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<?= $server ?>/panelfiles/assets/img/favicon.ico">
-        <style>
-            .card-con {
-                padding: 25px;
-                height: 200px;
-                width: 200px;
-                border-radius: 5px;
-                -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
-                box-shadow: 2px 2px 2.94px 2px rgba(4, 26, 55, 0.16);
-                border: none;
-                margin-bottom: 30px;
-                -webkit-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
+        <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 
-
-            }
-
-            button.cards:hover {
-                box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-                transform: translateY(-3%);
-            }
-            button.cards {
-                border-radius: 6px;
-                box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-                transition: all 400ms ease;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/public/css/ticactivos/panel-consultas.blade.css')}}">
 
         <!-- Editor -->
-        <script type="text/javascript" src="<?= $server ?>/panelfiles/ckeditor/ckeditor.js"></script>
+        <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
     </head>
 
     <body>
@@ -109,7 +85,7 @@ $server = '/Berhlan/public';
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/menu/64" title="Activos TIC">
+                                <a href="{{ asset ('/panel/menu/64')}}" title="Activos TIC">
                                     <font color="#34495e">
                                         Activos TIC >
                                     </font>
@@ -122,7 +98,7 @@ $server = '/Berhlan/public';
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/menu/64" class="btn btn-primary btn-sm ml10" title="Activos TIC">
+                        <a href="{{ asset ('/panel/menu/64')}}" class="btn btn-primary btn-sm ml10" title="Activos TIC">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
                         </a>
@@ -138,10 +114,10 @@ $server = '/Berhlan/public';
                     <div class="row">
                         <div class="col-sm-6 col-xl-3">
                             <button class="col-xs-12 panel panel-body cards"
-                                onclick="location.href='<?= $server ?>/panel/ticactivos/conexempleados'"
+                                onclick="location.href='{{ asset ('/panel/ticactivos/conexempleados')}}"
                                 title="Consulta tareas realizadas">
                                 <div class="col-xs-12 ph10 text-center">
-                                    <img src="<?= $server ?>/panelfiles/iconos/tic_activos/rechazado.png"
+                                    <img src="{{ asset ('/panelfiles/iconos/tic_activos/rechazado.png')}}"
                                         class="img-responsive mauto " style="width: 128px; height:128px;" />
                                     <h6 class="text-muted" style="padding-top: 40px">
                                         <font color="#2a2f43">
@@ -154,10 +130,10 @@ $server = '/Berhlan/public';
 
                         <div class="col-sm-6 col-xl-3">
                             <button class="col-xs-12 panel panel-body cards"
-                                onclick="location.href='{{ $server }}/panel/ticactivos/concantidades' "title="Consulta tareas realizadas"
+                                onclick="location.href='{{ asset ('/panel/ticactivos/concantidades')}} "title="Consulta tareas realizadas"
                                 title="Consulta tareas realizadas">
                                 <div class="col-xs-12 ph10 text-center">
-                                    <img src="<?= $server ?>/panelfiles/iconos/tic_activos/medios-de-comunicacion-social.png"
+                                    <img src="{{ asset ('/panelfiles/iconos/tic_activos/medios-de-comunicacion-social.png')}}"
                                         class="img-responsive mauto " style="width: 128px; height:128px;" />
                                     <h6 class="text-muted" style="padding-top: 40px">
                                         <font color="#2a2f43">
@@ -172,10 +148,10 @@ $server = '/Berhlan/public';
 
                         <div class="col-sm-6 col-xl-3">
                             <button class="col-xs-12 panel panel-body cards"
-                                onclick="location.href='{{ $server }}/panel/ticactivos/consultasedades'"
+                                onclick="location.href='{{ asset ('/panel/ticactivos/consultasedades')}}"
                                 title="Consulta tareas realizadas">
                                 <div class="col-xs-12 ph10 text-center">
-                                    <img src="<?= $server ?>/panelfiles/iconos/tic_activos/reloj-de-arena.png"
+                                    <img src="{{ asset ('/panelfiles/iconos/tic_activos/reloj-de-arena.png')}}"
                                         class="img-responsive mauto " style="width: 128px; height:128px;" />
                                     <h6 class="text-muted" style="padding-top: 40px">
                                         <font color="#2a2f43">
@@ -188,10 +164,10 @@ $server = '/Berhlan/public';
 
                         <div class="col-sm-6 col-xl-3">
                             <button class="col-xs-12 panel panel-body cards"
-                                onclick="location.href='{{ $server }}/panel/ticactivos/consultasmtto'"
+                                onclick="location.href='{{ asset ('/panel/ticactivos/consultasmtto')}}"
                                 title="Consulta tareas realizadas">
                                 <div class="col-xs-12 ph10 text-center">
-                                    <img src="<?= $server ?>/panelfiles/iconos/tic_activos/mantenimiento.png"
+                                    <img src="{{ asset ('/panelfiles/iconos/tic_activos/mantenimiento.png')}}"
                                         class="img-responsive mauto " style="width: 128px; height:128px;" />
                                     <h6 class="text-muted" style="padding-top: 40px">
                                         <font color="#2a2f43">
@@ -211,10 +187,10 @@ $server = '/Berhlan/public';
                     <div class="row">
                         <div class="col-sm-6 col-xl-3">
                             <button class="col-xs-12 panel panel-body cards"
-                                onclick="location.href='{{ $server }}/panel/ticactivos/consultasesperados'"
+                                onclick="location.href='{{ asset ('/panel/ticactivos/consultasesperados')}}"
                                 title="Consulta tareas realizadas">
                                 <div class="col-xs-12 ph10 text-center">
-                                    <img src="<?= $server ?>/panelfiles/iconos/tic_activos/instalacion.png"
+                                    <img src="{{ asset ('/panelfiles/iconos/tic_activos/instalacion.png')}}"
                                         class="img-responsive mauto " style="width: 128px; height:128px;" />
                                     <h6 class="text-muted" style="padding-top: 40px">
                                         <font color="#2a2f43">
@@ -227,10 +203,10 @@ $server = '/Berhlan/public';
 
                         <div class="col-sm-6 col-xl-3">
                             <button class="col-xs-12 panel panel-body cards"
-                                onclick="location.href='{{ $server }}/panel/ticactivos/consultasparam'"
+                                onclick="location.href='{{ asset ('/panel/ticactivos/consultasparam')}}"
                                 title="Consulta tareas realizadas">
                                 <div class="col-xs-12 ph10 text-center">
-                                    <img src="<?= $server ?>/panelfiles/iconos/tic_activos/filtrar.png"
+                                    <img src="{{ asset ('/panelfiles/iconos/tic_activos/filtrar.png')}}"
                                         class="img-responsive mauto " style="width: 128px; height:128px;" />
                                     <h6 class="text-muted" style="padding-top: 40px">
                                         <font color="#2a2f43">
@@ -243,10 +219,10 @@ $server = '/Berhlan/public';
 
                         <div class="col-sm-6 col-xl-3">
                             <button class="col-xs-12 panel panel-body cards"
-                                onclick="location.href='{{ $server }}/panel/ticactivos/consultasproye'"
+                                onclick="location.href='{{ asset ('/panel/ticactivos/consultasproye')}}"
                                 title="Consulta tareas realizadas">
                                 <div class="col-xs-12 ph10 text-center">
-                                    <img src="<?= $server ?>/panelfiles/iconos/tic_activos/proyeccion.png"
+                                    <img src="{{ asset ('/panelfiles/iconos/tic_activos/proyeccion.png')}}"
                                         class="img-responsive mauto " style="width: 128px; height:128px;" />
                                     <h6 class="text-muted" style="padding-top: 40px">
                                         <font color="#2a2f43">
@@ -258,10 +234,10 @@ $server = '/Berhlan/public';
                         </div>
                         <div class="col-sm-6 col-xl-3">
                             <button class="col-xs-12 panel panel-body cards"
-                                onclick="location.href='{{ $server }}/panel/ticactivos/consultastareas'"
+                                onclick="location.href='{{ asset ('/panel/ticactivos/consultastareas')}}"
                                 title="Consulta tareas realizadas">
                                 <div class="col-xs-12 ph10 text-center">
-                                    <img src="<?= $server ?>/panelfiles/iconos/tic_activos/tareas-diarias.png"
+                                    <img src="{{ asset ('/panelfiles/iconos/tic_activos/tareas-diarias.png')}}"
                                         class="img-responsive mauto " style="width: 128px; height:128px;" />
                                     <h6 class="text-muted" style="padding-top: 40px">
                                         <font color="#2a2f43">
@@ -278,7 +254,7 @@ $server = '/Berhlan/public';
                             <button class="col-xs-12 panel panel-body cards" data-toggle="modal" data-target="#consultasxusuario"
                                 title="Consulta tareas realizadas">
                                 <div class="col-xs-12 ph10 text-center">
-                                    <img src="<?= $server ?>/panelfiles/iconos/tic_activos/buscarporactivo.png"
+                                    <img src="{{ asset ('/panelfiles/iconos/tic_activos/buscarporactivo.png')}}"
                                         class="img-responsive mauto " style="width: 128px; height:128px;" />
                                     <h6 class="text-muted" style="padding-top: 40px">
                                         <font color="#2a2f43">
@@ -292,7 +268,7 @@ $server = '/Berhlan/public';
                             <button class="col-xs-12 panel panel-body cards" data-toggle="modal" data-target="#consultasxactivo"
                                 title="Consulta tareas realizadas">
                                 <div class="col-xs-12 ph10 text-center">
-                                    <img src="<?= $server ?>/panelfiles/iconos/tic_activos/busquedaporusuario.png"
+                                    <img src="{{ asset ('/panelfiles/iconos/tic_activos/busquedaporusuario.png')}}"
                                         class="img-responsive mauto " style="width: 128px; height:128px;" />
                                     <h6 class="text-muted" style="padding-top: 40px">
                                         <font color="#2a2f43">
@@ -322,27 +298,27 @@ $server = '/Berhlan/public';
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/utility/utility.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/demo.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/main.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/pages/allcp_forms-elements.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/pages/allcp_forms-elements.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
         <!-- -------------- /Scripts -------------- -->
 
@@ -355,7 +331,7 @@ $server = '/Berhlan/public';
                 // Realizar una solicitud AJAX para obtener los datos del empleado
                 $.ajax({
                     type: 'GET',
-                    url: '<?= $server ?>/panel/ticactivos/conexempleados/' +
+                    url: '{{ asset ('/panel/ticactivos/conexempleados/')}}' +
                         id,
                     success: function(data) {
 

@@ -1,5 +1,4 @@
 <?php
-$server = '/Berhlan/public';
 
 use App\Models\TicActivos\PanelTipos;
 use App\Models\TicActivos\PanelTareas;
@@ -35,20 +34,20 @@ use App\Models\Parametrizacion\PanelEmpresas;
             rel='stylesheet' type='text/css'>
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/skin/default_skin/css/theme.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.min.css">
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<?= $server ?>/panelfiles/assets/img/favicon.ico">
+        <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 
         <!-- Editor -->
-        <script type="text/javascript" src="<?= $server ?>/panelfiles/ckeditor/ckeditor.js"></script>
+        <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
     </head>
 
     <body>
@@ -86,7 +85,7 @@ use App\Models\Parametrizacion\PanelEmpresas;
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/ticactivos/consultasparam"
+                                <a href="{{ asset ('/panel/ticactivos/consultasparam')}}"
                                     title="Activos TIC > Consulta parametrizada > Resultado">
                                     <font color="#34495e">
                                         Activos TIC > Consulta parametrizada > Resultado >
@@ -100,7 +99,7 @@ use App\Models\Parametrizacion\PanelEmpresas;
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/ticactivos/consultasparam" class="btn btn-primary btn-sm ml10"
+                        <a href="{{ asset ('/panel/ticactivos/consultasparam')}}" class="btn btn-primary btn-sm ml10"
                             title="Activos TIC > Consulta parametrizada > Resultado">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
@@ -257,7 +256,7 @@ use App\Models\Parametrizacion\PanelEmpresas;
                                   ?>
                                                             <button type="button" style="background:#f7f9f9;"
                                                                 class="btn btn-default light"
-                                                                onclick="window.open('<?= $server ?>/archivos/Activostic/Fotos/<?= $DatosActivo[0]->foto ?>','_blank')"
+                                                                onclick="window.open('{{ asset ('/archivos/Activostic/Fotos/')}}<?= $DatosActivo[0]->foto ?>','_blank')"
                                                                 title="<?= $DatosActivo[0]->foto ?>">
                                                                 <img src="<?= $ruta ?>" class="img-responsive mauto"
                                                                     style="width: 100px; border-radius:6px; border:1;"
@@ -284,7 +283,7 @@ use App\Models\Parametrizacion\PanelEmpresas;
                                   ?>
                                                             <button type="button" style="background:#f7f9f9;"
                                                                 class="btn btn-default light"
-                                                                onclick="window.open('<?= $server ?>/archivos/Activostic/Facturas/<?= $DatosActivo[0]->factura ?>','_blank')"
+                                                                onclick="window.open('{{ asset ('/archivos/Activostic/Facturas/')}}<?= $DatosActivo[0]->factura ?>','_blank')"
                                                                 title="<?= $DatosActivo[0]->factura ?>">
                                                                 <i class="fa fa-file-pdf-o fa-lg"
                                                                     style="color:red;"></i>
@@ -308,7 +307,7 @@ use App\Models\Parametrizacion\PanelEmpresas;
                                   ?>
                                                             <button type="button" style="background:#f7f9f9;"
                                                                 class="btn btn-default light"
-                                                                onclick="window.open('<?= $server ?>/archivos/Activostic/Actas_firmadas/<?= $DatosActivo[0]->actafirmada ?>','_blank')"
+                                                                onclick="window.open('{{ asset ('/archivos/Activostic/Actas_firmadas/')}}<?= $DatosActivo[0]->actafirmada ?>','_blank')"
                                                                 title="<?= $DatosActivo[0]->actafirmada ?>">
                                                                 <i class="fa fa-file-pdf-o fa-lg"
                                                                     style="color:red;"></i>
@@ -597,7 +596,7 @@ use App\Models\Parametrizacion\PanelEmpresas;
 
                                                         <td>
                                                             <button type="button" class="btn btn-default light"
-                                                                onclick="window.location.href='<?= $server ?>/panel/ticactivos/modificaract/<?= $DatosActivo[0]->id_activo ?>'"
+                                                                onclick="window.location.href='{{ asset ('/panel/ticactivos/modificaract/<?= $DatosActivo[0]->id_activo ?>'"
                                                                 title="Modificar">
                                                                 <i class="fa fa-pencil-square-o fa-lg"
                                                                     style="color:blue;"> Editar</i>
@@ -611,7 +610,7 @@ use App\Models\Parametrizacion\PanelEmpresas;
                                                                 echo "<font color=\"green\">";
                                                                 //Consulto la ultima actividad
                                                                 $UltFecha = PanelConsultas::FechaUltActividad($DatosActivo[0]->id_activo);
-                                                             
+
                                                                 echo date('Y-m-d', strtotime($UltFecha[0]->fecha . '+' . $DatosActivo[0]->mes_mtto . ' month'));
                                                                 echo '</font>';
                                                             }
@@ -955,7 +954,7 @@ use App\Models\Parametrizacion\PanelEmpresas;
                       @csrf
                                                     <button type="submit" name="activo_act" id="activo_act" value="{{$DatosActivo[0]->id_activo}}" class="btn btn-secondary"
                                                         style="align-items: flex-end" >
-                                                        <img src="{{ $server }}/images/folder (1).png"
+                                                        <img src="{{ asset ('/images/folder')}} (1).png"
                                                             alt="">
                                                     </button>
                                                 </form>
@@ -1068,36 +1067,36 @@ use App\Models\Parametrizacion\PanelEmpresas;
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/utility/utility.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/demo.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/main.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/pages/allcp_forms-elements.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/pages/allcp_forms-elements.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
         <!-- -------------- /Scripts -------------- -->
         <script>
             function actas() {
                 setTimeout(() => {
-                    window.open('<?= $server ?>/archivos/ANEXO_DOCUMENTO_ACTIVO.pdf', '_blank');
-                    window.open('<?= $server ?>/archivos/AUTORIZACION_DE_DESCUENTO.pdf', '_blank');
+                    window.open('{{ asset ('/archivos/ANEXO_DOCUMENTO_ACTIVO.pdf')}}', '_blank');
+                    window.open('{{ asset ('/archivos/AUTORIZACION_DE_DESCUENTO.pdf')}}', '_blank');
                 }, 0);
-                window.location.href = '<?= $server ?>/panel/ticactivos/acta/<?= $DatosActivo[0]->id_activo ?>';
+                window.location.href = '{{ asset ('/panel/ticactivos/acta/')}}<?= $DatosActivo[0]->id_activo ?>';
             }
         </script>
     </body>
