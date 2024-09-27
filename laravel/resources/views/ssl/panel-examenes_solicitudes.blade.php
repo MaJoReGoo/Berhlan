@@ -1,5 +1,4 @@
 <?php
-$server = '/Berhlan/public';
 
 use App\Models\Parametrizacion\PanelCargos;
 use App\Models\Parametrizacion\PanelAreas;
@@ -22,68 +21,8 @@ use App\Models\Requisiciones\PanelRequisiciones;
         </title>
         @include('includes-CDN/include-head')
 
-        <style>
-            .radio-button {
-                display: flex;
-                gap: 10px;
-                justify-content: center;
-                margin: 10px;
-                position: relative;
-                align-items: center;
-                color: white;
-            }
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/public/css/ssl/panel-examenes_solicitudes.blade.css')}}">
 
-            .radio-button input[type="radio"] {
-                position: absolute;
-                opacity: 0;
-            }
-
-            .radio {
-                position: relative;
-                display: inline-block;
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-                border: 2px solid #ccc;
-                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-                transform: translateZ(-25px);
-                transition: all 0.3s ease-in-out;
-            }
-
-            .radio::before {
-                position: absolute;
-                content: '';
-                width: 10px;
-                height: 10px;
-                top: 5px;
-                left: 5px;
-                border-radius: 50%;
-                background-color: #fff;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-                opacity: 0;
-                transition: all 0.3s ease-in-out;
-            }
-
-            .radio-button input[type="radio"]:checked+.radio {
-                border-color: #34495e;
-                transform: translateZ(0px);
-                background-color: #fff;
-            }
-
-            .radio-button input[type="radio"]:checked+.radio::before {
-                opacity: 1;
-                position: relative;
-                top: 0px;
-                left: 0px;
-                background-color: #34495e;
-            }
-
-            .box {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-            }
-        </style>
     </head>
 
     <body>
@@ -121,7 +60,7 @@ use App\Models\Requisiciones\PanelRequisiciones;
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/menu/128" title="Requisición de personal">
+                                <a href="{{ asset ('/panel/menu/128')}}" title="Requisición de personal">
                                     <font color="#34495e">
                                         Ssl >
                                     </font>
@@ -135,7 +74,7 @@ use App\Models\Requisiciones\PanelRequisiciones;
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
 
-                        <a href="<?= $server ?>/panel/menu/128" class="btn btn-primary btn-sm ml10"
+                        <a href="{{ asset ('/panel/menu/128')}}" class="btn btn-primary btn-sm ml10"
                             title="Requisición de personal">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
@@ -215,7 +154,7 @@ use App\Models\Requisiciones\PanelRequisiciones;
 
                                                                 <td style="text-align:center">
                                                                     <font color="#2A2F43">
-                                                                        @php        
+                                                                        @php
                                                                             if ($examen->estado_examen == 1 && $examen->asistencia == null) {
                                                                                 echo 'Pendiente';
                                                                             } else if ($examen->estado_examen == 2 && $examen->asistencia == null) {
@@ -260,7 +199,7 @@ use App\Models\Requisiciones\PanelRequisiciones;
                                                                     <font color="#2A2F43">
                                                                         <b>
                                                                             <a class="btn btn-default"
-                                                                                href="<?= $server ?>/panel/ssl/examenes/solicitud/<?= $examen->id_soli_examen ?>">
+                                                                                href="{{ asset ('/panel/ssl/examenes/solicitud/')}}<?= $examen->id_soli_examen ?>">
                                                                                 <img style="height: 30px" width="30px"
                                                                                     src="{{ $server }}/images/detalle_new.png">
                                                                                 </img>

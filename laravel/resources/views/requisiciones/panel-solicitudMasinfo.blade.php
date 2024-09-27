@@ -1,5 +1,5 @@
 <?php
-$server = '/Berhlan/public';
+
 ?>
 
 @foreach ($DatosUsuario as $DatLog)
@@ -52,7 +52,7 @@ $server = '/Berhlan/public';
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/requisiciones/solicitud"
+                                <a href="{{ asset('/panel/requisiciones/solicitud') }}"
                                     title="Requisición de personal > Solicitud <?= $DatosSolicitud[0]->num_solicitud ?>">
                                     <font color="#34495e">
                                         Requisición de personal > Solicitud <?= $DatosSolicitud[0]->num_solicitud ?> >
@@ -66,7 +66,7 @@ $server = '/Berhlan/public';
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/requisiciones/solicitud" class="btn btn-primary btn-sm ml10"
+                        <a href="{{ asset('/panel/requisiciones/solicitud') }}" class="btn btn-primary btn-sm ml10"
                             title="Requisición de personal > Solicitud <?= $DatosSolicitud[0]->num_solicitud ?>">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
@@ -161,16 +161,21 @@ $server = '/Berhlan/public';
 
                                                     <div class="row d-flex align-items-center text-dark">
                                                         <div class="col-md-12">
-                                                            <label style="color: #34495e; display:flex; justify-content:center">
+                                                            <label
+                                                                style="color: #34495e; display:flex; justify-content:center">
                                                                 <b>Requiere activos:</b>
                                                             </label>
                                                             <br>
-                                                            <div class="d-flex justify-content-center" style="gap: 10px;">
+                                                            <div class="d-flex justify-content-center"
+                                                                style="gap: 10px;">
 
                                                                 @foreach ($herramientas as $herramienta)
-                                                                    <div class="checkbox-wrapper-19 d-flex align-items-center">
-                                                                        <input id="{{ $herramienta->id_herramienta }}" type="checkbox"
-                                                                            value="{{ $herramienta->id_herramienta }}" disabled
+                                                                    <div
+                                                                        class="checkbox-wrapper-19 d-flex align-items-center">
+                                                                        <input id="{{ $herramienta->id_herramienta }}"
+                                                                            type="checkbox"
+                                                                            value="{{ $herramienta->id_herramienta }}"
+                                                                            disabled
                                                                             {{ $soliRequiere->contains($herramienta->nombre_herramienta) ? 'checked' : '' }}>
                                                                         <label style="min-height: 0px" class="check-box"
                                                                             for="{{ $herramienta->id_herramienta }}"></label>
@@ -197,7 +202,8 @@ $server = '/Berhlan/public';
                                                             <div class="col-md-3 text-center">
                                                                 <h6>Tipo contrato:</h6>
                                                                 @if (isset($DatosSolicitud[0]->nombre_tipo_contrato))
-                                                                <p>{{ $DatosSolicitud[0]->nombre_tipo_contrato }}</p>
+                                                                    <p>{{ $DatosSolicitud[0]->nombre_tipo_contrato }}
+                                                                    </p>
                                                                 @else
                                                                     <p>No hay información</p>
                                                                 @endif
@@ -240,45 +246,59 @@ $server = '/Berhlan/public';
                                                         <br>
                                                         <br>
 
-                                                        <div class="panel-header p5 text-white" style="background-color:#39405a">
+                                                        <div class="panel-header p5 text-white"
+                                                            style="background-color:#39405a">
                                                             Información de ingresos
                                                         </div>
                                                         <br>
 
-                                                        <table class="table table-hover text-dark text-center" id="ingresos">
-                                                            <thead >
+                                                        <table class="table table-hover text-dark text-center"
+                                                            id="ingresos">
+                                                            <thead>
                                                                 <tr>
-                                                                    <th style="background-color:#39405a; color:white;">Consecutivo</th>
-                                                                    <th style="background-color:#39405a; color:white;">Consecutivo Examen</th>
-                                                                    <th style="background-color:#39405a; color:white;">Nombre</th>
-                                                                    <th style="background-color:#39405a; color:white;">Genero</th>
-                                                                    <th style="background-color:#39405a; color:white;">Cédula</th>
-                                                                    <th style="background-color:#39405a; color:white;">Correo</th>
-                                                                    <th style="background-color:#39405a; color:white;">Telefono</th>
-                                                                    <th style="background-color:#39405a; color:white;">Fecha induccion</th>
-                                                                    <th style="background-color:#39405a; color:white;">Fecha inicio laboral</th>
-                                                                    <th style="background-color:#39405a; color:white;">Estado</th>
+                                                                    <th style="background-color:#39405a; color:white;">
+                                                                        Consecutivo</th>
+                                                                    <th style="background-color:#39405a; color:white;">
+                                                                        Consecutivo Examen</th>
+                                                                    <th style="background-color:#39405a; color:white;">
+                                                                        Nombre</th>
+                                                                    <th style="background-color:#39405a; color:white;">
+                                                                        Genero</th>
+                                                                    <th style="background-color:#39405a; color:white;">
+                                                                        Cédula</th>
+                                                                    <th style="background-color:#39405a; color:white;">
+                                                                        Correo</th>
+                                                                    <th style="background-color:#39405a; color:white;">
+                                                                        Telefono</th>
+                                                                    <th style="background-color:#39405a; color:white;">
+                                                                        Fecha induccion</th>
+                                                                    <th style="background-color:#39405a; color:white;">
+                                                                        Fecha inicio laboral</th>
+                                                                    <th style="background-color:#39405a; color:white;">
+                                                                        Estado</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 @foreach ($ingresos as $ingreso)
                                                                     <tr>
                                                                         <td>{{ $ingreso->consecutivo }}</td>
-                                                                        <td>{{$ingreso->fk_id_soli_examen == null ? 'No se requiere examen' : 'SSL-'. $ingreso->fk_id_soli_examen}}</td>
+                                                                        <td>{{ $ingreso->fk_id_soli_examen == null ? 'No se requiere examen' : 'SSL-' . $ingreso->fk_id_soli_examen }}
+                                                                        </td>
                                                                         <td>{{ $ingreso->nombre_soli_ingreso }}</td>
                                                                         <td>{{ $ingreso->genero_soli_ingreso }}</td>
                                                                         <td>{{ $ingreso->cedula_soli_ingreso }}</td>
                                                                         <td>{{ $ingreso->correo_soli_ingreso }}</td>
                                                                         <td>{{ $ingreso->telefono_soli_ingreso }}</td>
                                                                         @if ($ingreso->fecha_induccion == null)
-                                                                        <td>Pendiente por diligencimiento</td>
+                                                                            <td>Pendiente por diligencimiento</td>
                                                                         @else
-                                                                        <td>{{ $ingreso->fecha_induccion }}</td>
+                                                                            <td>{{ $ingreso->fecha_induccion }}</td>
                                                                         @endif
                                                                         @if ($ingreso->fecha_inicio_laboral == null)
-                                                                        <td>Pendiente por diligencimiento</td>
+                                                                            <td>Pendiente por diligencimiento</td>
                                                                         @else
-                                                                        <td>{{ $ingreso->fecha_inicio_laboral }}</td>
+                                                                            <td>{{ $ingreso->fecha_inicio_laboral }}
+                                                                            </td>
                                                                         @endif
                                                                         <td>{{ $ingreso->nombre_estado_ingreso }}</td>
                                                                     </tr>
@@ -288,11 +308,13 @@ $server = '/Berhlan/public';
                                                         <br>
                                                         <hr style="margin: 6px">
                                                         <br>
-                                                        <div class="panel-header p5 text-white" style="background-color:#39405a">
+                                                        <div class="panel-header p5 text-white"
+                                                            style="background-color:#39405a">
                                                             Información de dotaciones
                                                         </div>
                                                         <div class="nano-content p20 allcp-form">
-                                                            <table class="table table-hover text-dark text-center" id="dotaciones">
+                                                            <table class="table table-hover text-dark text-center"
+                                                                id="dotaciones">
                                                                 <thead>
                                                                     <tr>
                                                                         <th class="text-center">Nombre dotación</th>
@@ -306,9 +328,11 @@ $server = '/Berhlan/public';
                                                                     @foreach ($dotaciones as $dotacion)
                                                                         <tr>
                                                                             <td>{{ $dotacion->nombre_dotacion }}</td>
-                                                                            <td>{{ $dotacion->nombre_talla_dotacion }}</td>
+                                                                            <td>{{ $dotacion->nombre_talla_dotacion }}
+                                                                            </td>
                                                                             <td>{{ $dotacion->cantidad_dotacion }}</td>
-                                                                            <td>{{ $dotacion->nombre_soli_ingreso }}</td>
+                                                                            <td>{{ $dotacion->nombre_soli_ingreso }}
+                                                                            </td>
                                                                         </tr>
                                                                     @endforeach
 
@@ -319,7 +343,8 @@ $server = '/Berhlan/public';
                                                         <hr style="margin: 6px">
                                                         <br>
 
-                                                        <table class="table table-hover text-dark text-center" id="novedades-solicitudes" style="width: 100%">
+                                                        <table class="table table-hover text-dark text-center"
+                                                            id="novedades-solicitudes" style="width: 100%">
                                                             <thead>
                                                                 <tr>
                                                                     <th style="background-color:#39405a; text-align: center; color:white;"
