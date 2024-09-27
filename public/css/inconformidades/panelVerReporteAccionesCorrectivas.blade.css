@@ -1,0 +1,168 @@
+.radio-button {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px;
+    position: relative;
+    align-items: center;
+    color: white;
+}
+
+.radio-button input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transform: translateZ(-25px);
+    transition: all 0.3s ease-in-out;
+}
+
+.radio::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.radio-button input[type="radio"]:checked+.radio {
+    border-color: #34495e;
+    transform: translateZ(0px);
+    background-color: #fff;
+}
+
+.radio-button input[type="radio"]:checked+.radio::before {
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: #34495e;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+textarea {
+    width: 300px;
+    resize: none;
+    overflow-y: hidden;
+}
+
+.flipswitch {
+    position: relative;
+    width: 100px;
+}
+
+.flipswitch input[type=checkbox] {
+    display: none;
+}
+
+.flipswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #999999;
+    border-radius: 50px;
+}
+
+.flipswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.flipswitch-inner:before,
+.flipswitch-inner:after {
+    float: left;
+    width: 50%;
+    height: 32px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 20px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.flipswitch-inner:before {
+    content: "No";
+    padding-left: 18px;
+    background-color: #FFFFFF;
+    color: #437A99;
+}
+
+.flipswitch-inner:after {
+    content: "Si";
+    padding-right: 18px;
+    background-color: #437A99;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+.flipswitch-switch {
+    width: 35px;
+    margin: -2.5px;
+    background: #FFFFFF;
+    border: 1px solid #999999;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 67px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.flipswitch-cb:checked+.flipswitch-label .flipswitch-inner {
+    margin-left: 0;
+}
+
+.flipswitch-cb:checked+.flipswitch-label .flipswitch-switch {
+    right: 0;
+}
+
+.select2-selection {
+    border: 1px #ccc solid;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.select2-container .select2-selection--single {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#eliminarFila-persona {
+    position: relative;
+    right: 2px;
+    cursor: pointer;
+    color: red;
+    left: 730px;
+    top: -20px;
+}
+
+
+@media only screen and (max-width: 1265px) {
+    #eliminarFila-persona {
+        left: 530px;
+    }
+}

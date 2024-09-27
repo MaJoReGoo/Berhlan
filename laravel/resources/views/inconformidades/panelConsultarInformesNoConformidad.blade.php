@@ -1,5 +1,5 @@
 <?php
-$server = '/Berhlan/public';
+
 ?>
 
 @foreach ($DatosUsuario as $DatLog)
@@ -25,21 +25,21 @@ $server = '/Berhlan/public';
 
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/skin/default_skin/css/theme.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.min.css">
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<?= $server ?>/panelfiles/assets/img/favicon.ico">
+        <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 
 
         <!-- Editor -->
-        <script type="text/javascript" src="<?= $server ?>/panelfiles/ckeditor/ckeditor.js"></script>
+        <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
 
         {{-- Importar styles y funcionamiento del Select2 --}}
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -47,8 +47,8 @@ $server = '/Berhlan/public';
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
-        <script type="text/javascript" src="<?= $server ?>/panelfiles/select2/dist/js/select2.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/select2/dist/css/select2.min.css">
+        <script type="text/javascript" src="{{ asset ('/panelfiles/select2/dist/js/select2.min.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/select2/dist/css/select2.min.css')}}">
         <!-- Importar style select2 -->
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
@@ -56,95 +56,8 @@ $server = '/Berhlan/public';
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap4.min.css">
 
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/public/css/inconformidades/panelConsultarInformesNoConformidad.blade.css')}}">
 
-        <style>
-            .radio-button {
-                display: flex;
-                gap: 10px;
-                justify-content: center;
-                margin: 10px;
-                position: relative;
-                align-items: center;
-                color: white;
-            }
-
-            .radio-button input[type="radio"] {
-                position: absolute;
-                opacity: 0;
-            }
-
-            .radio {
-                position: relative;
-                display: inline-block;
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-                border: 2px solid #ccc;
-                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-                transform: translateZ(-25px);
-                transition: all 0.3s ease-in-out;
-            }
-
-            .radio::before {
-                position: absolute;
-                content: '';
-                width: 10px;
-                height: 10px;
-                top: 5px;
-                left: 5px;
-                border-radius: 50%;
-                background-color: #fff;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-                opacity: 0;
-                transition: all 0.3s ease-in-out;
-            }
-
-            .radio-button input[type="radio"]:checked+.radio {
-                border-color: #34495e;
-                transform: translateZ(0px);
-                background-color: #fff;
-            }
-
-            .radio-button input[type="radio"]:checked+.radio::before {
-                opacity: 1;
-                position: relative;
-                top: 0px;
-                left: 0px;
-                background-color: #34495e;
-            }
-
-            .box {
-                display: flex;
-                gap: 20px;
-            }
-
-            textarea {
-                width: 300px;
-                resize: none;
-                overflow-y: hidden;
-            }
-
-            .select2-selection {
-                border: 1px #ccc solid;
-                height: 100%;
-                border-radius: 5px;
-            }
-
-            .select2-container .select2-selection--single {
-                height: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: center
-            }
-
-            .allcp-form {
-                color: #000;
-            }
-
-            button:hover {
-                border: darkgreen 1px solid
-            }
-        </style>
     </head>
 
     <body>
@@ -182,7 +95,7 @@ $server = '/Berhlan/public';
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/menu/118" title="Inconformidades">
+                                <a href="{{ asset ('/panel/menu/118')}}" title="Inconformidades">
                                     <font color="#34495e">
                                         Mejora Continua >
                                     </font>
@@ -195,7 +108,7 @@ $server = '/Berhlan/public';
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/menu/118" class="btn btn-primary btn-sm ml10"
+                        <a href="{{ asset ('/panel/menu/118')}}" class="btn btn-primary btn-sm ml10"
                             title="Inconformidades">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
@@ -308,7 +221,7 @@ $server = '/Berhlan/public';
                                                                     value="{{ $RegistrosTratamiento }}">
                                                                 <button class="btn btn-secondary" type="submit">
                                                                     <img style="height: 30px" width="30px"
-                                                                        src="{{ $server }}/images/download.png">
+                                                                        src="{{  asset ('/images/download.png')}}">
                                                                     </img>
                                                                 </button>
                                                             </form>
@@ -360,9 +273,9 @@ $server = '/Berhlan/public';
                                                                 <td style="text-align: center">
                                                                     <font color="#2A2F43">
                                                                         <button class="btn btn-secondary"
-                                                                            onclick="window.location.href = '{{ $server }}/panel/noconformidades/ver/tratamiento/{{ $regTratamiento->id_tratamiento }}'">
+                                                                            onclick="window.location.href = '{{ asset ('/panel/noconformidades/ver/tratamiento/')}}{{ $regTratamiento->id_tratamiento }}'">
                                                                             <img style="height: 30px" width="30px"
-                                                                                src="{{ $server }}/images/mostrar-informe.png">
+                                                                                src="{{ asset ('/images/mostrar-informe.png')}}">
                                                                             </img>
                                                                         </button>
                                                                     </font>
@@ -370,7 +283,7 @@ $server = '/Berhlan/public';
                                                                 <td style="text-align: center ">
                                                                     <font color="#2A2F43">
                                                                         <button class="btn btn-secondary"
-                                                                            onclick="window.location.href = '{{ $server }}/panel/noconformidades/word/tratamiento/{{ $regTratamiento->id_tratamiento }}'">
+                                                                            onclick="window.location.href = '{{ asset ('/panel/noconformidades/word/tratamiento/')}}{{ $regTratamiento->id_tratamiento }}'">
                                                                             <img style="height: 30px" width="30px"
                                                                                 src="{{ $server }}/images/download.png">
                                                                             </img>
@@ -476,7 +389,7 @@ $server = '/Berhlan/public';
                                                                     value="{{ $RegistrosReporte }}">
                                                                 <button class="btn btn-secondary" type="submit">
                                                                     <img style="height: 30px" width="30px"
-                                                                        src="{{ $server }}/images/download.png">
+                                                                        src="{{ asset ('/images/download.png')}}">
                                                                     </img>
                                                                 </button>
                                                             </form>
@@ -543,9 +456,9 @@ $server = '/Berhlan/public';
                                                                 <td style="text-align: center ">
                                                                     <font color="#2A2F43">
                                                                         <button class="btn btn-secondary"
-                                                                            onclick="window.location.href = '{{ $server }}/panel/noconformidades/ver/reporte/{{ $regReporte->id_reporte_conform }}'">
+                                                                            onclick="window.location.href = '{{ asset ('/panel/noconformidades/ver/reporte/')}}{{ $regReporte->id_reporte_conform }}'">
                                                                             <img style="height: 30px" width="30px"
-                                                                                src="{{ $server }}/images/mostrar-informe.png">
+                                                                                src="{{ asset ('/images/mostrar-informe.png')}}">
                                                                             </img>
                                                                         </button>
                                                                     </font>
@@ -553,9 +466,9 @@ $server = '/Berhlan/public';
                                                                 <td style="text-align: center ">
                                                                     <font color="#2A2F43">
                                                                         <button class="btn btn-secondary"
-                                                                            onclick="window.location.href = '{{ $server }}/panel/noconformidades/excel/reporte/{{ $regReporte->id_reporte_conform }}'">
+                                                                            onclick="window.location.href = '{{ asset ('/panel/noconformidades/excel/reporte/')}}{{ $regReporte->id_reporte_conform }}'">
                                                                             <img style="height: 30px" width="30px"
-                                                                                src="{{ $server }}/images/download.png">
+                                                                                src="{{ asset ('/images/download.png')}}">
                                                                             </img>
                                                                         </button>
                                                                     </font>
@@ -593,27 +506,27 @@ $server = '/Berhlan/public';
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+        <script src="<{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/utility/utility.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/demo.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/main.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/pages/dashboard2.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
         <!-- -------------- DataTables -------------- -->
         <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
