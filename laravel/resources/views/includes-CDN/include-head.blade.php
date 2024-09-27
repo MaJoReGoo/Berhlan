@@ -18,17 +18,17 @@
 {{-- ------------- --}}
 
 {{-- CSS link --}}
-<link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/skin/default_skin/css/theme.css">
-<link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.min.css">
-<link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.css">
+<link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 {{-- ---------- --}}
 
 {{-- Icono de pestaña --}}
-<link rel="shortcut icon" href="<?= $server ?>/panelfiles/assets/img/favicon.ico">
+<link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 {{-- ------------------ --}}
 
 {{-- ---- Plugins ---- --}}
-<link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+<link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 {{-- ------------------ --}}
 
 {{-- CSS link select2 --}}
@@ -42,8 +42,8 @@
 
 
 {{-- Jquery --}}
-<script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-<script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+<script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+<script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 {{-- ------- --}}
 
 {{-- CSS Datatables --}}

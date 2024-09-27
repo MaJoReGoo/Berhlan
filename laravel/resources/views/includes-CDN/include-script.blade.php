@@ -7,23 +7,23 @@
 {{-- ------------- --}}
 
 <!-- -------------- JvectorMap Plugin -------------- -->
-<script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-<script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+<script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+<script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
 <!-- -------------- HighCharts Plugin -------------- -->
-<script src="<?= $server ?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-<script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-<script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+<script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+<script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+<script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
 <!-- -------------- Theme Scripts -------------- -->
-<script src="<?= $server ?>/panelfiles/assets/js/utility/utility.js"></script>
-<script src="<?= $server ?>/panelfiles/assets/js/demo/demo.js"></script>
-<script src="<?= $server ?>/panelfiles/assets/js/main.js"></script>
-<script src="<?= $server ?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
-<script src="<?= $server ?>/panelfiles/assets/js/pages/dashboard2.js"></script>
+<script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+<script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+<script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+<script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+<script src="{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
 
 <!-- -------------- Page JS -------------- -->
-<script src="<?= $server ?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+<script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
 
 {{-- Datatables --}}
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
