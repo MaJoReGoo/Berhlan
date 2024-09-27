@@ -1,5 +1,5 @@
 <?php
-$server = '/Berhlan/public';
+
 ?>
 
 <!doctype html>
@@ -12,8 +12,8 @@ $server = '/Berhlan/public';
   <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
-  <script src="https://<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.min.js"></script>
-  <link rel="stylesheet" href="https://<?= $server ?>/panelfiles/sweetalert/dist/sweetalert.css">
+  <script src="https://{{ asset ('/panelfiles/sweetalert/dist/sweetalert.min.js')}}"></script>
+  <link rel="stylesheet" href="https://{{ asset ('/panelfiles/sweetalert/dist/sweetalert.css')}}">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script language="JavaScript">
     //<!--
