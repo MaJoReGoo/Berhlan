@@ -1,5 +1,5 @@
 <?php
-$server = '/Berhlan/public';
+
 ?>
 
 @foreach ($DatosUsuario as $DatLog)
@@ -23,20 +23,20 @@ $server = '/Berhlan/public';
             rel='stylesheet' type='text/css'>
 
         <!-- -------------- CSS - theme -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/skin/default_skin/css/theme.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
         <!-- -------------- CSS - allcp forms -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.min.css">
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/allcp/forms/css/forms.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.css')}}">
 
         <!-- -------------- Plugins -------------- -->
-        <link rel="stylesheet" type="text/css" href="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
         <!-- -------------- Favicon -------------- -->
-        <link rel="shortcut icon" href="<?= $server ?>/panelfiles/assets/img/favicon.ico">
+        <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.ico')}}">
 
         <!-- Editor -->
-        <script type="text/javascript" src="<?= $server ?>/panelfiles/ckeditor/ckeditor.js"></script>
+        <script type="text/javascript" src="{{ asset ('/panelfiles/ckeditor/ckeditor.js')}}"></script>
     </head>
 
     <body>
@@ -74,7 +74,7 @@ $server = '/Berhlan/public';
                     <div class="topbar-left">
                         <ul class="nav nav-list nav-list-topbar pull-left">
                             <li class="active">
-                                <a href="<?= $server ?>/panel/noticias/noticias" title="Inicio">
+                                <a href="{{ asset ('/panel/noticias/noticias')}}" title="Inicio">
                                     <font color="#34495e">
                                         Cambio de contraseña
                                     </font>
@@ -84,7 +84,7 @@ $server = '/Berhlan/public';
                     </div>
 
                     <div class="topbar-right hidden-xs hidden-sm mt5 mr35">
-                        <a href="<?= $server ?>/panel/noticias/noticias" class="btn btn-primary btn-sm ml10"
+                        <a href="{{ asset ('/panel/noticias/noticias')}}" class="btn btn-primary btn-sm ml10"
                             title="Inicio">
                             REGRESAR &nbsp;
                             <span class="fa fa-arrow-left"></span>
@@ -119,11 +119,13 @@ $server = '/Berhlan/public';
                                                                 identificación</strong></span>, por favor elegir una
                                                         contraseña diferente.</span>
                                                     <br><br>
-                                                    <span style="color: #000000"><strong> Recuerde:</strong> </span> <br><span style="color: #bf616a"><strong> * Su usuario
+                                                    <span style="color: #000000"><strong> Recuerde:</strong> </span>
+                                                    <br><span style="color: #bf616a"><strong> * Su usuario
                                                             para ingresar a la intranet será su cédula.
                                                         </strong></span>
                                                     <br>
-                                                    <span style="color: #bf616a"><strong>* La nueva contraseña debe ser mayor a 6
+                                                    <span style="color: #bf616a"><strong>* La nueva contraseña debe ser
+                                                            mayor a 6
                                                             digitos.</strong></span>
 
                                                     <br />
@@ -223,27 +225,27 @@ $server = '/Berhlan/public';
         <!-- -------------- Scripts -------------- -->
 
         <!-- -------------- jQuery -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
         <!-- -------------- JvectorMap Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
         <!-- -------------- HighCharts Plugin -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
         <!-- -------------- Theme Scripts -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/utility/utility.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/demo.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/main.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
-        <script src="<?= $server ?>/panelfiles/assets/js/pages/dashboard2.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
 
         <!-- -------------- Page JS -------------- -->
-        <script src="<?= $server ?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+        <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js"></script>
 
         <!-- -------------- /Scripts -------------- -->
     </body>

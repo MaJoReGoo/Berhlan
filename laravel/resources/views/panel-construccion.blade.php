@@ -1,5 +1,5 @@
 <?php
-$server ='/Berhlan/public';
+
 
 use App\Models\PanelLogin;
 ?>
@@ -23,16 +23,16 @@ use App\Models\PanelLogin;
       <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
       <!-- -------------- CSS - theme -------------- -->
-      <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/skin/default_skin/css/theme.css">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/skin/default_skin/css/theme.css')}}">
 
       <!-- -------------- CSS - allcp forms -------------- -->
-      <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/allcp/forms/css/forms.min.css">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/allcp/forms/css/forms.min.css')}}">
 
       <!-- -------------- Plugins -------------- -->
-      <link rel="stylesheet" type="text/css" href="<?=$server?>/panelfiles/assets/js/plugins/c3charts/c3.min.css">
+      <link rel="stylesheet" type="text/css" href="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.css')}}">
 
       <!-- -------------- Favicon -------------- -->
-      <link rel="shortcut icon" href="<?=$server?>/panelfiles/assets/img/favicon.png">
+      <link rel="shortcut icon" href="{{ asset ('/panelfiles/assets/img/favicon.png')}}">
     </head>
 
     <body class="sales-stats-page">
@@ -75,7 +75,7 @@ use App\Models\PanelLogin;
                 &nbsp;&nbsp;
               </div>
               <div class="col-md-9 title" style="padding-top: 30px">
-                <img src="<?=$server?>/archivos/construccion.jpg" width="100%" alt="Berlan"/>
+                <img src="{{ asset ('/archivos/construccion.jpg')}}" width="100%" alt="Berlan"/>
               </div>
             </div>
           </div>
@@ -86,27 +86,27 @@ use App\Models\PanelLogin;
       <!-- -------------- /Body Wrap  -------------- -->
       <!-- -------------- Scripts -------------- -->
       <!-- -------------- jQuery -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/jquery/jquery-1.11.3.min.js"></script>
-      <script src="<?=$server?>/assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/jquery/jquery-1.11.3.min.js')}}"></script>
+      <script src="{{ asset ('/assets/js/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
       <!-- -------------- JvectorMap Plugin -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/jquery.jvectormap.min.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/jvectormap/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
 
       <!-- -------------- HighCharts Plugin -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/highcharts/highcharts.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/c3charts/d3.min.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/plugins/c3charts/c3.min.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/highcharts/highcharts.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/d3.min.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/plugins/c3charts/c3.min.js')}}"></script>
 
       <!-- -------------- Theme Scripts -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/utility/utility.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/demo/demo.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/main.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/demo/widgets_sidebar.js"></script>
-      <script src="<?=$server?>/panelfiles/assets/js/pages/dashboard2.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/utility/utility.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/demo.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/main.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/widgets_sidebar.js')}}"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/pages/dashboard2.js')}}"></script>
 
       <!-- -------------- Page JS -------------- -->
-      <script src="<?=$server?>/panelfiles/assets/js/demo/charts/highcharts.js"></script>
+      <script src="{{ asset ('/panelfiles/assets/js/demo/charts/highcharts.js')}}"></script>
       <!-- -------------- /Scripts -------------- -->
     </body>
   </html>

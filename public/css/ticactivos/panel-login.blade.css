@@ -1,0 +1,121 @@
+a {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:focus,
+        a:hover {
+            text-decoration: none;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .flx {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row wrap;
+        }
+
+        .steps {
+            flex: 0 0 106px;
+            height: 106px;
+            margin: 0;
+            color: #ffffff;
+            padding: 0 !important;
+            border-radius: 50%;
+        }
+
+        .label {
+            width: 100%;
+            font-size: 1.3rem;
+            padding: 10px;
+            border: solid 2px rgb(255 255 255 / 0%);
+            position: relative;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .label:hover {
+            border: solid 2px #ffd300;
+            transform: scale(1.1);
+        }
+
+        .label::before {
+            background-color: white;
+            color: white;
+            content: " ";
+            display: block;
+            border-radius: 50%;
+            border: 1px solid grey;
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 28px;
+            transition-duration: 0.4s;
+            transform: scale(0);
+        }
+
+        .steps img {
+            display: block;
+            margin: 2px;
+            width: 100px;
+            max-width: inherit;
+            height: 100px;
+        }
+
+        .page-heading-area {
+            position: relative;
+            padding: 160px 0px 0;
+            height: 100%;
+            display: inline-block;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        @media only screen and (max-width:767px) {
+            .title {
+                margin-bottom: 70px;
+            }
+
+            .steps {
+                flex: 0 0 70px;
+                height: 70px;
+            }
+
+            .steps img {
+                width: 65px;
+                height: 65px;
+                margin: 0;
+            }
+
+            .page-heading-area {
+                padding: 100px 0px 0;
+            }
+        }
